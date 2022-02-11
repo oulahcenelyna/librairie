@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="categorieLivresstyle.css">
+    <link rel="stylesheet" href="Style/categorieLivresstyle.css">
     
     <title>La P'tite librairie</title>
   </head>

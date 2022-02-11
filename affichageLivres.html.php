@@ -6,7 +6,7 @@
 <head>
 <link rel="stylesheet">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="affichageLivresstyle.css">
+    <link rel="stylesheet" href="Style/affichageLivresstyle.css">
     <title>Document</title>
 </head>
 <body>
