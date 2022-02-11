@@ -1,0 +1,197 @@
+body{
+    background-color: blue;
+    margin: 0;
+    padding :0;
+}
+header{
+    background-color: blueviolet;
+}
+.container{
+    
+    margin-bottom: 1%;
+}
+
+.livreCouverture img{
+width: 270px;
+height: 370px;
+}
+.edges{
+
+   display: flex;
+   justify-content: space-between;
+}
+footer {
+  display: block;
+  margin: 0;
+  background-color: burlywood;
+}
+
+h3{
+    margin-left: 5px;
+     padding: 5px 10px 5px 10px;
+}
+ #currentLivre{
+     background-color: darkgoldenrod;
+    
+     border-radius: 13px;
+ }
+ .livre{
+     background-color: darkmagenta;
+     display: flex;
+     justify-content: space-around;
+ }
+ .auteur{
+background-color: darkolivegreen;
+padding-bottom: 120px;
+margin-top: 50px;
+margin-bottom: 50px;
+ }
+
+ .resume{
+     font-size: 13px;
+     width: 500px;
+     height: auto;
+     background-color: darksalmon;
+     margin-top: 10%;
+ }
+ .resume p{
+     padding: 15px;
+ }
+ .resumeButton{
+     display: inline;
+ }
+ .reserverButton button{
+     float: right;
+     padding: 5px;
+     border-radius: 30px;
+ }
+ .recomendations{
+   margin-top: 105px;
+   background-color: pink;
+   padding: 5%;
+ }
+
+ /* ********************************************** */
+ /* ****** BOOK ETAGERE 3D */
+ /* ************************************************ */
+ * {
+    box-sizing: border-box;
+  }
+  #etagere{
+    margin-bottom: 150px;;
+  }
+  
+  .shelf {
+    position:relative;
+    perspective: 300px;
+    perspective: 50% 50%;
+    margin-top: 12px;
+    width:100%;
+    height: 6px;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg);
+    
+  }
+  
+  .front,
+  .top,
+  .back,
+  .left-side,
+  .right-side {
+    position: absolute;
+    opacity:0.2;
+  }
+  
+  .front {
+    opacity:0.66;
+    background: red;
+    z-index: 9;
+    border: 1px solid rgba(#6c7a4a,0.4);
+    width: 100%;
+    height: 11px;
+    
+    box-shadow: 0px 4px 10px -1px rgba(0, 0, 0, 0.4), 0px 7px 18px 1px rgba(0, 0, 0, 0.5), 0 0 0 5px transparent, 0 0 0 5px transparent;
+  }
+  
+  .top {
+    opacity:0.9;
+    background: yellow;
+    border: 1px solid rgba(#6c7a4a,0.4);
+    width: 100%;
+    height: 40px;
+    transform: rotateX(90deg) translateY(-40px);
+    transform-origin: 50% 0;
+  }
+  
+  .back {
+    opacity:0.6;
+    margin-top: 0;
+    border: none;
+    width: 100%;
+    height: 6px;
+    transform: translateZ(-40px);
+  }
+  
+  .left-side {
+    opacity:0.4;
+    background: red;
+    border: 2px solid rgba(#8ca06a,0.9);
+    width: 40px;
+    height: 11px;
+    transform: rotateY(90deg) translateZ(0);
+    transform-origin: 0 50%;
+  }
+  
+  .right-side {
+    opacity:0.4;
+    background: red;
+    border: 2px solid rgba(#8ca06a,0.9);
+    width: 40px;
+    height: 11px;
+    right: 0;
+    transform: rotateY(90deg) translateZ(40px);
+    transform-origin: 0 50%;
+  }
+  /* ***************** */
+  /* Carte categories recomendation */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;
+  margin-top: 8%;
+  margin-bottom: 5%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+
+  }
