@@ -11,16 +11,10 @@
 
     <!-- connexion à la base de données -->
     <?php
-      require_once 'layouts/login_librairie.php';
+      require_once 'BD/login_librairie.php';
+      require_once 'BD/connexion_librairie.php';
 
-      // Connexion à la base
-      $conn = new mysqli($hn, $un, $pw, $db);
-      if ($conn->connect_error)  die("Erreur fatale : connexion");
-
-      // Affichage des caractères accentués en utf8
-      $query = "set names utf8";
-      $result = $conn->query($query);
-      if (!$result)  die("Erreur fatale : gestion des caractères");
+      
 
     ?>
    
@@ -49,6 +43,8 @@
 
       //Récupérer le resultat
       $rows = $result->num_rows; //Nombres de lignes de données
+
+
     
     ?>
     
@@ -59,6 +55,7 @@
         while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
       ?>
       <?php include('layouts/cardLivre.php'); ?>
+      
       <?php
         }
       ?>
@@ -80,7 +77,8 @@
 
       //Récupérer le resultat
       $rows = $result->num_rows; //Nombres de lignes de données
-    
+
+      
     ?>
     
     <!-- cartes de chaque livre en maths -->
@@ -89,6 +87,7 @@
         while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
       ?>
       <?php include('layouts/cardLivre.php'); ?>
+      
       <?php
         }
       ?>
@@ -245,15 +244,7 @@
     </div>
       
     
-   <!-- ============== FONCTION GET POST ============-->
-    <?php
-      
-      function get_post($conn, $var)
-      {
-      return $conn->real_escape_string($_POST[$var]);
-      }
-    ?>
-
+  
     <!-- FOOTER  -->
     <?php include('layouts/footer.php'); ?>
   </body>

@@ -12,20 +12,19 @@
 <body>
     <!-- connexion à la base de données -->
     <?php
-      require_once 'layouts/login_librairie.php';
-
-      // Connexion à la base
-      $conn = new mysqli($hn, $un, $pw, $db);
-      if ($conn->connect_error)  die("Erreur fatale : connexion");
-
-      // Affichage des caractères accentués en utf8
-      $query = "set names utf8";
-      $result = $conn->query($query);
-      if (!$result)  die("Erreur fatale : gestion des caractères");
+      require_once 'BD/login_librairie.php';
+      require_once 'BD/connexion_librairie.php';
+     
 
     ?>
     <!-- Insertion du header -->
     <?php include('layouts/header2.php'); ?>
+
+
+    <!-- affichage du livre en question  -->
+
+
+
 
     <div class="container">
         <!-- Visualisations des details du livre  -->
@@ -40,36 +39,32 @@
   <div class="right-side"></div>
     </div>
   <!-- Recommendations basées sur ce livre -->
+  <!-- requette pour recueillir la catégorie  -->
+
+  <?php  //Préparation de la requête
+  
+      $query = "SELECT * FROM ouvrages,disciplines_ouvrages WHERE ouvrages.idOuvrage=disciplines_ouvrages.idOuvrage ";
+
+      //Execution de la requête
+      $result = $conn->query($query);
+      if(!$result) die("Erreur fatale : requête");
+
+      //Récupérer le resultat
+      $rows = $result->num_rows; //Nombres de lignes de données
+
+
+    
+    ?>
+    
+  <h2>recommandé pour vous </h2>
+
   <div class="recommendations">
         <div class="row">
-          <div class="column">
-            <div class="card">
-              <h3>Card 1</h3>
-              <p>Some text</p>
-              <p>Some text</p>
-            </div>
-          </div>
-          <div class="column">
-            <div class="card">
-              <h3>Card 1</h3>
-              <p>Some text</p>
-              <p>Some text</p>
-            </div>
-          </div>
-          <div class="column">
-            <div class="card">
-              <h3>Card 1</h3>
-              <p>Some text</p>
-              <p>Some text</p>
-            </div>
-          </div>
-          <div class="column">
-            <div class="card">
-              <h3>Card 1</h3>
-              <p>Some text</p>
-              <p>Some text</p>
-            </div>
-          </div>
+         <?php 
+          while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
+         include ('layouts/recomandationLivre.php');
+          }
+         ?>
         </div>
     </div>
 </div>
