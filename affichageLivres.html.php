@@ -40,7 +40,35 @@
     </div>
   <!-- Recommendations basées sur ce livre -->
   <!-- requette pour recueillir la catégorie  -->
+  <?php  //Préparation de la requête
+  $categorieLivreSelectionne=("SELECT libelle ,disciplines_ouvrages.idDiscipline
+  from disciplines,disciplines_ouvrages,ouvrages
+  where disciplines.idDiscipline=disciplines_ouvrages.idDiscipline
+  AND disciplines_ouvrages.idOuvrage=ouvrages.idOuvrage
+  AND ouvrages.idOuvrage=12 ");
+     
 
+      //Execution de la requête
+      $result = $conn->query($categorieLivreSelectionne);
+      if(!$result) die("Erreur fatale : categorie ");
+
+      //Récupérer le resultat
+      $rows = $result->num_rows; //Nombres de lignes de données
+
+
+    
+    ?>
+    <?php 
+         
+         while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
+          ?>
+        <h1><?php echo $row['libelle']; ?></h1>
+        <h1><?php echo $row['idDiscipline']; ?></h1>
+
+        <?php
+         }
+        ?>
+  
   <?php  //Préparation de la requête
   
       $query = "SELECT * FROM ouvrages,disciplines_ouvrages WHERE ouvrages.idOuvrage=disciplines_ouvrages.idOuvrage ";
@@ -61,6 +89,7 @@
   <div class="recommendations">
         <div class="row">
          <?php 
+         
           while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
          include ('layouts/recomandationLivre.php');
           }

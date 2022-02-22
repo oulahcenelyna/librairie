@@ -31,7 +31,7 @@
     <!-- CATEGORIE informatique  -->
     <h2 id="7" class="ml-3 mt-3">Informatique</h2>
     <?php  //Préparation de la requête
-      $query = "select image,auteur,titre,resume,ouvrages.idOuvrage
+      $query = "select image,auteur,titre,resume,ouvrages.idOuvrage,disciplines_ouvrages.idDiscipline
       from ouvrages,disciplines_ouvrages,disciplines 
       where ouvrages.idOuvrage=disciplines_ouvrages.idOuvrage
       And disciplines_ouvrages.idDiscipline=disciplines.idDiscipline
