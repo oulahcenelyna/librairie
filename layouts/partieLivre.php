@@ -88,9 +88,7 @@
                 }
             ?>
             </div>
-            <div class="reserverButton">
-               <button>RESERVER</button>
-        </div>
+            <?php include ('buttonReserver.php')?>
         </div>
         
 
