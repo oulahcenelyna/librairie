@@ -24,16 +24,21 @@
 
            
 
-
+            
             <div class="auteur">
-            <?php
+            <div class="imgAuteur">
+            <img src="images/auteur.png" alt="">
+            </div>
+           <div  class="nomAuteur">
+           <?php
                 while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
                     echo  $row['auteur'];
                 }
             ?>
+           </div>
             
             </div>
-
+            
 
             <?php
             //On vérifie qu'une variable GET à été transmise
@@ -79,6 +84,7 @@
             }
             else die("Aucun utilisateur choisi");
             ?>
+           
             <div class="resume">
             <?php
                 while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
@@ -88,7 +94,9 @@
                 }
             ?>
             </div>
+            <div class="buttonResponsive">
             <?php include ('buttonReserver.php')?>
+            </div>
         </div>
         
 

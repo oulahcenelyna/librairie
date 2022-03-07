@@ -103,7 +103,7 @@ if ($nbExemplaireRestant>0){
     // bouton reserver normal 
     ?>
     <form method="post" action=""  >
-		<input type="submit" name="reserver" value="RESERVER Un Exemplaire">
+		<input type="submit" name="reserver" value="RESERVER ">
 	</form>
   
     <?php 
@@ -127,7 +127,7 @@ if ($nbExemplaireRestant>0){
     VALUES ('$idEmprunteurtest','$exemplaireReservetest','$dateActuelletest','$dateInTwoWeekstest')";
    
        if (mysqli_query($conn, $query)) {
-        echo "New record created successfully !";
+        echo "Le livre a bien été reservé !";
         
        } 
       
