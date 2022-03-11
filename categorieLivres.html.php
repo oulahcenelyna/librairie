@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="Style/categorieLivresstyle.css">
+    <link rel="stylesheet" href="Style/categorieLivresstyle.scss">
     
     <title>La P'tite librairie</title>
   </head>
@@ -19,7 +19,8 @@
     ?>
    
    <!-- insertion de la barre de recherche et de la banière -->
-    <?php include('layouts/nav-bar.php'); ?>
+   <?php include('layouts/header2.php'); ?> 
+   <?php include('layouts/nav-bar.php'); ?>
     <?php include('layouts/baniere.php'); ?>
     <!-- resultats si recherche effectuée  -->
     <?php include('resultatRecherche.php'); ?>
@@ -27,7 +28,8 @@
     <?php include('layouts/categoriesListe.php'); ?>
     
     
-   
+   <div class="container">
+     
     <!-- CATEGORIE informatique  -->
     <h2 id="7" class="ml-3 mt-3">Informatique</h2>
     <?php  //Préparation de la requête
@@ -35,7 +37,7 @@
       from ouvrages,disciplines_ouvrages,disciplines 
       where ouvrages.idOuvrage=disciplines_ouvrages.idOuvrage
       And disciplines_ouvrages.idDiscipline=disciplines.idDiscipline
-      AND libelle like 'informatique'";
+      AND libelle like 'informatique' LIMIT 3";
 
       //Execution de la requête
       $result = $conn->query($query);
@@ -69,7 +71,7 @@
       from ouvrages,disciplines_ouvrages,disciplines 
       where ouvrages.idOuvrage=disciplines_ouvrages.idOuvrage
       And disciplines_ouvrages.idDiscipline=disciplines.idDiscipline
-      AND libelle like 'mathematiques' LIMIT 4";
+      AND libelle like 'mathematiques' LIMIT 3";
 
       //Execution de la requête
       $result = $conn->query($query);
@@ -101,7 +103,7 @@
       from ouvrages,disciplines_ouvrages,disciplines 
       where ouvrages.idOuvrage=disciplines_ouvrages.idOuvrage
       And disciplines_ouvrages.idDiscipline=disciplines.idDiscipline
-      AND libelle like 'anglais'";
+      AND libelle like 'anglais'LIMIT 3";
 
       //Execution de la requête
       $result = $conn->query($query);
@@ -131,7 +133,7 @@
       from ouvrages,disciplines_ouvrages,disciplines 
       where ouvrages.idOuvrage=disciplines_ouvrages.idOuvrage
       And disciplines_ouvrages.idDiscipline=disciplines.idDiscipline
-      AND libelle like 'Langues Vivantes ' ";
+      AND libelle like 'Langues Vivantes 'LIMIT 3 ";
 
       //Execution de la requête
       $result = $conn->query($query);
@@ -161,7 +163,7 @@
       from ouvrages,disciplines_ouvrages,disciplines 
       where ouvrages.idOuvrage=disciplines_ouvrages.idOuvrage
       And disciplines_ouvrages.idDiscipline=disciplines.idDiscipline
-      AND libelle like 'français' LIMIT 4";
+      AND libelle like 'français' LIMIT 3";
 
       //Execution de la requête
       $result = $conn->query($query);
@@ -191,7 +193,7 @@
       from ouvrages,disciplines_ouvrages,disciplines 
       where ouvrages.idOuvrage=disciplines_ouvrages.idOuvrage
       And disciplines_ouvrages.idDiscipline=disciplines.idDiscipline
-      AND libelle like 'Sciences de la vie et terre'";
+      AND libelle like 'Sciences de la vie et terre'LIMIT 3";
 
       //Execution de la requête
       $result = $conn->query($query);
@@ -221,7 +223,7 @@
       from ouvrages,disciplines_ouvrages,disciplines 
       where ouvrages.idOuvrage=disciplines_ouvrages.idOuvrage
       And disciplines_ouvrages.idDiscipline=disciplines.idDiscipline
-      AND libelle like 'Sciences physique chimie'";
+      AND libelle like 'Sciences physique chimie'LIMIT 3";
 
       //Execution de la requête
       $result = $conn->query($query);
@@ -242,6 +244,7 @@
         }
       ?>
     </div>
+   </div>
       
     
   

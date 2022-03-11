@@ -8,6 +8,11 @@ header{
    
     margin-bottom: 5%;
 }
+.edges{
+
+  display: flex;
+  justify-content: space-between;
+}
 .container{
     
     margin-bottom: 1%;
@@ -17,11 +22,7 @@ header{
 width: 270px;
 height: 370px;
 }
-.edges{
 
-   display: flex;
-   justify-content: space-between;
-}
 .footer{
   display: flex;
   justify-content: space-around;
@@ -325,6 +326,7 @@ button{
     .responsiveFooter{
       display: flex;
       justify-content: space-between;
+      
     }
     
     .auteur{
