@@ -18,67 +18,99 @@
   font-size: 17.5px;
 } */
 /* a changer  */
+body{
+  background-color: #F8F3ED !important;
+}
+.displayCategorie{
+  display: none;
+}
+
 .logo{
   width: 110px;
   height: 110px;
 }
+header{
+  margin-bottom: 5%;
+}
 
+.edges{
+display: flex;
+justify-content: space-between;
+}
 .titre{
   font-weight: 600;
-  font-size: 47px;
-  width:60%;
+  font-size: 36px;
+ text-align: left;
+ padding: 25px;
 }
 .baniere{
-  margin-top: 10px;
+  margin:0px 6% 10px 6%;
   background-color: pink;
+  border-radius: 20px;
   
-  padding: 45px 70px;
   text-align: center;
+}
+.baniere img {
+  width:500px;
+   height:300px;
+   margin: 0;
+   justify-content: end;
 }
 
 /* ==================================
    ====== barre de recherche  ======= 
    ================================== */
-
+   .center {
+    margin: auto;
+    width: 65%;
+    
+    
+    }
    .search
    {
-     border: 2px solid #CF5C3F;
+     border: none;
      overflow: auto;
      border-radius: 5px;
-     -moz-border-radius: 5px;
-     -webkit-border-radius: 5px;
-     width: 67%;
-     margin-left: 2%;
-     margin-top: 12px;
-   }
-   
-   .search input[type="text"]
-   {
-     border: 0px;
      
+     width: 100%;
+     margin: 0px 4px 16px 10% ;
+     background-color: none;
+   }
+   .search-form{
+     justify-content:end;
+   }
+   .search-form input[type="text"]
+   {
+     font-size: 20px;
+     border: 0px;
+     height: 65px;
      padding: 10px 10px;
+     background-color: white;
+     width: 75%;
+     
    }
    
-   .search input[type="text"]:focus
+   .search-form input[type="text"]:focus
    {
      outline: 0;
    }
    
    .search button[type="submit"]
    {
+    
      float: right;
      border: 0px;
      background: none;
-     background-color: #CF5C3F;
+     background-color: #DAAA63;
      color: #fff;
      float: right;
      padding: 10px;
      border-top-right-radius: 5px;
-     -moz-border-radius-top-right: 5px;
-     -webkit-border-radius-top-right: 5px;
      border-bottom-right-radius: 5px;
-     -moz-border-radius-bottom-right: 5px;
-     -webkit-border-radius-bottom-right: 5px;
+     width:10%;
+     height: 65px;
+     margin-right: 15%;
+     
            cursor:pointer;
    }
 
@@ -100,31 +132,77 @@
      height:37px;
   }
   /* ============ FOOTER ========*/
-  footer{
-    background-color: green;
-   padding: 10px;
+  .footer{
+    display: flex;
+    justify-content: space-around;
   }
+  
+  footer {
+    display: block;
+    margin: 0;
+    background-color: #383433;
+    width:100%;
+    color: white;
+    text-align: center;
+  }
+  .icone{
+    display: inline;
+    margin: 5px;
+  }
+  .cardIcone{
+    display: flex;
+  }
+  .contributeurs{
+    width: 30%;
+    font-size: 15px;
+    text-align: left;
+    margin-right: 0;
+  }
+  .footer h2{
+    color:white;
+  }
+  .responsiveFooter{
+    display: flex;
+    justify-content: space-around;
+  }
+  
    /* ================================= RESPONSIVE DU PROJET  ================================= */
    
    @media only screen and (min-width : 150px) and (max-width : 780px)
    {
-     
+    .footer{
+      display: inline-block;
+      
+    }
+    .responsiveFooter{
+      display: flex;
+      justify-content: space-between;
+      margin-left: 10px;
+    }
+    
+    .baniere img {
+      width:300px;
+       height:100px;
+       margin-top: auto;
+    }
+    
      .search
      {
-       width: 81%;
-       margin: 4px 4px 16px 1px ;
+       width: 96%;
+       margin: 4px 4px 16px 40px ;
        
        
      }
      .search input[type="text"]
    {
+    font-size: 15px;
      border: 0px;
-     
+     width: 73%;
      padding: 5px ;
    }
    .search button[type="submit"]
    {
-     
+    width:12%;
      padding: 5px;
      font-size: 15px;
    }
@@ -141,11 +219,13 @@
     padding: 5px 0px;
     text-align: center;
     
+    
   } 
   .titre{
-    font-size: 26px;
+    font-size: 17px;
     font-weight: 500;
     margin-top: 6px;
+    float: left;
   }
   .logo{
     width: 60px;

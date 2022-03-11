@@ -2,46 +2,60 @@
             
                 
             <!-- CATEGORIE informatique  -->
-            <?php  //Préparation de la requête
-            $query = "select image,auteur,titre,resume
-            from ouvrages
-            where titre like'%chinois%'
-            ";
-
-            //Execution de la requête
-            $result = $conn->query($query);
-            if(!$result) die("Erreur fatale : requête");
-
-            //Récupérer le resultat
-            $rows = $result->num_rows; //Nombres de lignes de données
             
+            <?php
+            //On vérifie qu'une variable GET à été transmise
+            if(isset($_GET ['idOuvrage']))
+            {
+                //On se sert de la variable GET pour récupérer l'entrée dans la table correspondant au membre choisi
+                $query = "SELECT * FROM ouvrages WHERE idOuvrage = ".$_GET['idOuvrage'];
+                //Tu éxécute la requête, et fait un affichage classique...
+                
+                //Execution de la requête
+                $result = $conn->query($query);
+                if(!$result) die("Erreur fatale : requête");
+
+                //Récupérer le resultat
+                $rows = $result->num_rows; //Nombres de lignes de données
+            }
+            else die("Aucun ouvrage choisi");
             ?>
+            
 
+           
 
+            
             <div class="auteur">
-            <?php
+            <div class="imgAuteur">
+            <img src="images/auteur.png" alt="">
+            </div>
+           <div  class="nomAuteur">
+           <?php
                 while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
-            ?>
-            <?php echo  $row['auteur']; ?>
-            <?php
+                    echo  $row['auteur'];
                 }
             ?>
+           </div>
+            
             </div>
             
-        <!-- CATEGORIE informatique  -->
-        <?php  //Préparation de la requête
-            $query = "select image,auteur,titre,resume
-            from ouvrages
-            where titre like'%chinois%'
-            ";
 
-            //Execution de la requête
-            $result = $conn->query($query);
-            if(!$result) die("Erreur fatale : requête");
+            <?php
+            //On vérifie qu'une variable GET à été transmise
+            if(isset($_GET ['idOuvrage']))
+            {
+                //On se sert de la variable GET pour récupérer l'entrée dans la table correspondant au membre choisi
+                $query = "SELECT * FROM ouvrages WHERE idOuvrage = ".$_GET['idOuvrage'];
+                //Tu éxécute la requête, et fait un affichage classique...
+                
+                //Execution de la requête
+                $result = $conn->query($query);
+                if(!$result) die("Erreur fatale : requête");
 
-            //Récupérer le resultat
-            $rows = $result->num_rows; //Nombres de lignes de données
-            
+                //Récupérer le resultat
+                $rows = $result->num_rows; //Nombres de lignes de données
+            }
+            else die("Aucun utilisateur choisi");
             ?>
         <div class="livreCouverture">
         <?php
@@ -53,21 +67,24 @@
             ?>
         </div>
         <div class="resumeButton">
-            <!-- CATEGORIE informatique  -->
-        <?php  //Préparation de la requête
-            $query = "select image,auteur,titre,resume
-            from ouvrages
-            where titre like'%chinois%'
-            ";
+        <?php
+            //On vérifie qu'une variable GET à été transmise
+            if(isset($_GET ['idOuvrage']))
+            {
+                //On se sert de la variable GET pour récupérer l'entrée dans la table correspondant au membre choisi
+                $query = "SELECT * FROM ouvrages WHERE idOuvrage = ".$_GET['idOuvrage'];
+                //Tu éxécute la requête, et fait un affichage classique...
+                
+                //Execution de la requête
+                $result = $conn->query($query);
+                if(!$result) die("Erreur fatale : requête");
 
-            //Execution de la requête
-            $result = $conn->query($query);
-            if(!$result) die("Erreur fatale : requête");
-
-            //Récupérer le resultat
-            $rows = $result->num_rows; //Nombres de lignes de données
-            
+                //Récupérer le resultat
+                $rows = $result->num_rows; //Nombres de lignes de données
+            }
+            else die("Aucun utilisateur choisi");
             ?>
+           
             <div class="resume">
             <?php
                 while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
@@ -77,9 +94,9 @@
                 }
             ?>
             </div>
-            <div class="reserverButton">
-               <button>RESERVER</button>
-        </div>
+            <div class="buttonResponsive">
+            <?php include ('buttonReserver.php')?>
+            </div>
         </div>
         
 

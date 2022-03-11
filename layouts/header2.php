@@ -1,17 +1,20 @@
 <header>
        <div class="edges">
-       <div class="">
-            <img src="images/1.jpg" alt="" width="70px" height="70px">
+       <div class="ml-3">
+       <a href="../librairie/categorieLivres.html.php"><img src="images/logo.png" alt="" width="90px" height="90px"></a>
+           
         </div>
-        <div class=" edges center">
+        <div class="displayCategorie">
+        <div class=" edges ">
            <h3 id="currentLivre">Livres</h3>
-           <h3>Accueil</h3>
+           <h3><a href="../librairie/categorieLivres.html.php">Accueil</a></h3>
        </div>
-        <div class=" end">
-            <img src="images/1.jpg" alt="" width="70px" height="70px">
+        </div>
+        <div class=" end mr-3">
+            <img src="images/profil.png" alt="" width="50px" height="50px">
         </div>
        </div>
        
      
-        <p>dkhhdgk</p>
+        
     </header>

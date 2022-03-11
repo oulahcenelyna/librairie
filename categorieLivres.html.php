@@ -1,9 +1,19 @@
+<!-- permet de rediriger a la page de connexion/inscription des la deconnexion -->
+
+<?php
+session_start();
+if (!isset($_SESSION['adresseMail'])){
+  header('Location:./index.html.php');
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="Style/categorieLivresstyle.css">
+    <link rel="stylesheet" href="Style/categorieLivresstyle.scss">
     
     <title>La P'tite librairie</title>
   </head>
@@ -11,21 +21,16 @@
 
     <!-- connexion à la base de données -->
     <?php
-      require_once 'layouts/login_librairie.php';
+      require_once 'BD/login_librairie.php';
+      require_once 'BD/connexion_librairie.php';
 
-      // Connexion à la base
-      $conn = new mysqli($hn, $un, $pw, $db);
-      if ($conn->connect_error)  die("Erreur fatale : connexion");
-
-      // Affichage des caractères accentués en utf8
-      $query = "set names utf8";
-      $result = $conn->query($query);
-      if (!$result)  die("Erreur fatale : gestion des caractères");
+      
 
     ?>
-   
+   <button> <a href="layouts/deconnexion.php">deconnexion</a> </button>
    <!-- insertion de la barre de recherche et de la banière -->
-    <?php include('layouts/nav-bar.php'); ?>
+   <?php include('layouts/header2.php'); ?> 
+   <?php include('layouts/nav-bar.php'); ?>
     <?php include('layouts/baniere.php'); ?>
     <!-- resultats si recherche effectuée  -->
     <?php include('resultatRecherche.php'); ?>
@@ -33,15 +38,16 @@
     <?php include('layouts/categoriesListe.php'); ?>
     
     
-   
+   <div class="container">
+     
     <!-- CATEGORIE informatique  -->
     <h2 id="7" class="ml-3 mt-3">Informatique</h2>
     <?php  //Préparation de la requête
-      $query = "select image,auteur,titre,resume,ouvrages.idOuvrage
+      $query = "select image,auteur,titre,resume,ouvrages.idOuvrage,disciplines_ouvrages.idDiscipline
       from ouvrages,disciplines_ouvrages,disciplines 
       where ouvrages.idOuvrage=disciplines_ouvrages.idOuvrage
       And disciplines_ouvrages.idDiscipline=disciplines.idDiscipline
-      AND libelle like 'informatique'";
+      AND libelle like 'informatique' LIMIT 3";
 
       //Execution de la requête
       $result = $conn->query($query);
@@ -49,6 +55,8 @@
 
       //Récupérer le resultat
       $rows = $result->num_rows; //Nombres de lignes de données
+
+
     
     ?>
     
@@ -59,6 +67,7 @@
         while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
       ?>
       <?php include('layouts/cardLivre.php'); ?>
+      
       <?php
         }
       ?>
@@ -72,7 +81,7 @@
       from ouvrages,disciplines_ouvrages,disciplines 
       where ouvrages.idOuvrage=disciplines_ouvrages.idOuvrage
       And disciplines_ouvrages.idDiscipline=disciplines.idDiscipline
-      AND libelle like 'mathematiques' LIMIT 4";
+      AND libelle like 'mathematiques' LIMIT 3";
 
       //Execution de la requête
       $result = $conn->query($query);
@@ -80,7 +89,8 @@
 
       //Récupérer le resultat
       $rows = $result->num_rows; //Nombres de lignes de données
-    
+
+      
     ?>
     
     <!-- cartes de chaque livre en maths -->
@@ -89,6 +99,7 @@
         while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
       ?>
       <?php include('layouts/cardLivre.php'); ?>
+      
       <?php
         }
       ?>
@@ -102,7 +113,7 @@
       from ouvrages,disciplines_ouvrages,disciplines 
       where ouvrages.idOuvrage=disciplines_ouvrages.idOuvrage
       And disciplines_ouvrages.idDiscipline=disciplines.idDiscipline
-      AND libelle like 'anglais'";
+      AND libelle like 'anglais'LIMIT 3";
 
       //Execution de la requête
       $result = $conn->query($query);
@@ -132,7 +143,7 @@
       from ouvrages,disciplines_ouvrages,disciplines 
       where ouvrages.idOuvrage=disciplines_ouvrages.idOuvrage
       And disciplines_ouvrages.idDiscipline=disciplines.idDiscipline
-      AND libelle like 'Langues Vivantes ' ";
+      AND libelle like 'Langues Vivantes 'LIMIT 3 ";
 
       //Execution de la requête
       $result = $conn->query($query);
@@ -162,7 +173,7 @@
       from ouvrages,disciplines_ouvrages,disciplines 
       where ouvrages.idOuvrage=disciplines_ouvrages.idOuvrage
       And disciplines_ouvrages.idDiscipline=disciplines.idDiscipline
-      AND libelle like 'français' LIMIT 4";
+      AND libelle like 'français' LIMIT 3";
 
       //Execution de la requête
       $result = $conn->query($query);
@@ -192,7 +203,7 @@
       from ouvrages,disciplines_ouvrages,disciplines 
       where ouvrages.idOuvrage=disciplines_ouvrages.idOuvrage
       And disciplines_ouvrages.idDiscipline=disciplines.idDiscipline
-      AND libelle like 'Sciences de la vie et terre'";
+      AND libelle like 'Sciences de la vie et terre'LIMIT 3";
 
       //Execution de la requête
       $result = $conn->query($query);
@@ -222,7 +233,7 @@
       from ouvrages,disciplines_ouvrages,disciplines 
       where ouvrages.idOuvrage=disciplines_ouvrages.idOuvrage
       And disciplines_ouvrages.idDiscipline=disciplines.idDiscipline
-      AND libelle like 'Sciences physique chimie'";
+      AND libelle like 'Sciences physique chimie'LIMIT 3";
 
       //Execution de la requête
       $result = $conn->query($query);
@@ -243,17 +254,10 @@
         }
       ?>
     </div>
+   </div>
       
     
-   <!-- ============== FONCTION GET POST ============-->
-    <?php
-      
-      function get_post($conn, $var)
-      {
-      return $conn->real_escape_string($_POST[$var]);
-      }
-    ?>
-
+  
     <!-- FOOTER  -->
     <?php include('layouts/footer.php'); ?>
   </body>

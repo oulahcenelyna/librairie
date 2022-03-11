@@ -6,26 +6,26 @@
 <head>
 <link rel="stylesheet">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="Style/affichageLivresstyle.css">
+    <link rel="stylesheet" href="Style/affichageLivresstyle.scss">
     <title>Document</title>
+  
 </head>
 <body>
     <!-- connexion à la base de données -->
     <?php
-      require_once 'layouts/login_librairie.php';
-
-      // Connexion à la base
-      $conn = new mysqli($hn, $un, $pw, $db);
-      if ($conn->connect_error)  die("Erreur fatale : connexion");
-
-      // Affichage des caractères accentués en utf8
-      $query = "set names utf8";
-      $result = $conn->query($query);
-      if (!$result)  die("Erreur fatale : gestion des caractères");
+      require_once 'BD/login_librairie.php';
+      require_once 'BD/connexion_librairie.php';
+     
 
     ?>
     <!-- Insertion du header -->
     <?php include('layouts/header2.php'); ?>
+
+
+    <!-- affichage du livre en question  -->
+
+
+
 
     <div class="container">
         <!-- Visualisations des details du livre  -->
@@ -39,41 +39,48 @@
   <div class="left-side"></div>
   <div class="right-side"></div>
     </div>
+    
+    <div class="resumeResponsive">
+
+    <?php
+     //On se sert de la variable GET pour récupérer l'entrée dans la table correspondant au membre choisi
+     $query = "SELECT * FROM ouvrages WHERE idOuvrage = ".$_GET['idOuvrage'];
+     //Tu éxécute la requête, et fait un affichage classique...
+     
+     //Execution de la requête
+     $result = $conn->query($query);
+     if(!$result) die("Erreur fatale : requête");
+
+     //Récupérer le resultat
+     $rows = $result->num_rows; //Nombres de lignes de données
+
+
+     while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
+            ?>
+            <h2>Résumé </h2>
+           <p> <?php echo  $row['resume']; ?></p>
+            <?php
+                }
+            ?>
+    </div>
   <!-- Recommendations basées sur ce livre -->
+  <?php include ('layouts/sqlRecomandation.php')?>
+    
+  <h2>Recommandé pour vous </h2>
+
   <div class="recommendations">
         <div class="row">
-          <div class="column">
-            <div class="card">
-              <h3>Card 1</h3>
-              <p>Some text</p>
-              <p>Some text</p>
-            </div>
-          </div>
-          <div class="column">
-            <div class="card">
-              <h3>Card 1</h3>
-              <p>Some text</p>
-              <p>Some text</p>
-            </div>
-          </div>
-          <div class="column">
-            <div class="card">
-              <h3>Card 1</h3>
-              <p>Some text</p>
-              <p>Some text</p>
-            </div>
-          </div>
-          <div class="column">
-            <div class="card">
-              <h3>Card 1</h3>
-              <p>Some text</p>
-              <p>Some text</p>
-            </div>
-          </div>
+         <?php 
+         
+          while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
+         include ('layouts/recomandationLivre.php');
+          }
+         ?>
         </div>
     </div>
 </div>
-<footer >footer</footer> 
+<!-- FOOTER  -->
+<?php include('layouts/footer.php'); ?>
      
 </body>
 
