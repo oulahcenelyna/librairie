@@ -1,3 +1,13 @@
+<!-- permet de rediriger a la page de connexion/inscription des la deconnexion -->
+
+<?php
+session_start();
+if (!isset($_SESSION['adresseMail'])){
+  header('Location:./index.html.php');
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -17,7 +27,7 @@
       
 
     ?>
-   
+   <button> <a href="layouts/deconnexion.php">deconnexion</a> </button>
    <!-- insertion de la barre de recherche et de la banière -->
    <?php include('layouts/header2.php'); ?> 
    <?php include('layouts/nav-bar.php'); ?>
