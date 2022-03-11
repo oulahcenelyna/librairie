@@ -16,6 +16,7 @@ if(isset($_POST['connecter']))
 	 echo $rows;
 	 if ($rows = 1) {
 		 $_SESSION['adresseMail'] = $courielForm;
+		 header('Location:../categorieLivres.html.php');
 	 }
 }
 ?>
