@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['adresseMail'])){
+  header('Location:./index.html.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -25,7 +32,7 @@
     <!-- affichage du livre en question  -->
 
 
-
+<?php echo $_SESSION['adresseMail'];?>
 
     <div class="container">
         <!-- Visualisations des details du livre  -->
@@ -58,8 +65,10 @@
      while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
             ?>
             <h2>Résumé </h2>
-           <p> <?php echo  $row['resume']; ?></p>
+           <p> <?php 
+           echo  $row['resume']; ?></p>
             <?php
+             
                 }
             ?>
     </div>

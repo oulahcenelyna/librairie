@@ -18,10 +18,10 @@
 		<input type="text" name="prenomForm">
 		<br>
 		Couriel:<br>
-		<input type="email" name="courielForm">
+		<input type="email" name="courielFormInscription">
 		<br>
 		Mot de Passe:<br>
-		<input type="text" name="MotPasseForm">
+		<input type="text" name="MotPasseFormInscription">
 		<br><br>
 		<input type="submit" name="envoyer" value="submit">
 	</form>
@@ -30,10 +30,10 @@
     <h1>Inscription </h1>
     <form method="post" action="layouts/connexion.php">
         Couriel:<br>
-		<input type="email" name="courielForm">
+		<input type="email" name="courielFormConnexion">
 		<br>
 		Mot de Passe:<br>
-		<input type="text" name="MotPasseForm">
+		<input type="text" name="MotPasseFormConnexion">
 		<br><br>
 		<input type="submit" name="connecter" value="submit">
 	</form>
