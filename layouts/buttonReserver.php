@@ -85,7 +85,7 @@
     $dateInTwoWeeks =  date("Ymd", mktime(0, 0, 0, date("m"), date("d")+14, date("Y")));
     
     //idEmprunteur 
-    $idEmprunteur=2;
+    $idEmprunteur=$_SESSION['emprunteur'];
     
 
     

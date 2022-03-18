@@ -4,20 +4,38 @@
  session_start();
 if(isset($_POST['connecter']))
 {	 
+	
+
+	// connexion : verification que le mot de passe correspond bien a l'email entre 
 	 
-	 $courielForm = htmlspecialchars($_POST['courielForm']);
-	 $MotPasseForm = htmlspecialchars($_POST['MotPasseForm']);
-	 $query = "SELECT COUNT(*) From emprunteurs where adresseMail = '$courielForm' AND motDePasse = '$MotPasseForm'";
+	 $courielForm = htmlspecialchars($_POST['courielFormConnexion']);
+	 $MotPasseForm = hash('sha256', htmlspecialchars($_POST['MotPasseFormConnexion']));
+	 $query = "SELECT * From emprunteurs where adresseMail = '$courielForm' AND MotDePasse = '$MotPasseForm'";
+	 
 	 //Execution de la requête
 	 $result = $conn->query($query);
 	 if(!$result) die("Erreur fatale : requête");
-	 //Récupérer le resultat
-	 $rows = $result->num_rows; //Nombres de lignes de données
-	 echo $rows;
-	 if ($rows = 1) {
-		 $_SESSION['adresseMail'] = $courielForm;
+	 
+	 
+	 $motPasse="dvsndqvhs";
+	 //  affecter le mot de passe de la base de donnée relié a l'adresse mail 
+	 while ($row = $result->fetch_assoc()) {
+		$motPasse = $row['MotDePasse'];
+		$idConnection = $row['idEmprunteur'];
+	}
+	echo $query;
+	// print_r($result);
+	//  echo $MotPasseForm;
+	//  echo '<br>----';
+	//  echo $motPasse;
+	 if  ($MotPasseForm === $motPasse) {
+		 
+		$_SESSION['adresseMail'] = $courielForm;
+		$_SESSION['emprunteur'] = $idConnection;
+		 
 		 header('Location:../categorieLivres.html.php');
-	 }
+	 }else {
+		echo "adresse mail ou mot de passe incorrect ";	 }
+	 
 }
 ?>
-<!--  -->
