@@ -15,17 +15,7 @@ a {
 h2 {
   font-size: 20px; }
 
-.bg-left-half {
-  position: relative; }
-  .bg-left-half:before {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    z-index: -1;
-    content: "";
-    left: 0;
-    top: 0;
-    background-color: #f8f9fa; }
+
 
 .media-29101 img {
   margin-bottom: 20px; }
@@ -56,6 +46,6 @@ h2 {
       transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
       margin: 3px; }
     .owl-2-style .owl-dots .owl-dot.active span {
-      background: #ff008c; }
+      background: #daaa63; }
     .owl-2-style .owl-dots .owl-dot:active, .owl-2-style .owl-dots .owl-dot:focus {
       outline: none; }

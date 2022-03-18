@@ -27,10 +27,10 @@ if (!isset($_SESSION['adresseMail'])){
       
 
     ?>
-   <button> <a href="layouts/deconnexion.php">deconnexion</a> </button>
+    <button> <a href="layouts/deconnexion.php">deconnexion</a> </button> 
    <!-- insertion de la barre de recherche et de la banière -->
    <?php include('layouts/header2.php'); ?> 
-   <?php include('layouts/nav-bar.php'); ?>
+ 
     <?php include('layouts/baniere.php'); ?>
     <!-- resultats si recherche effectuée  -->
     <?php include('resultatRecherche.php'); ?>

@@ -1,3 +1,4 @@
+<!-- partie pour rester  connecter tout le long des pages -->
 <?php
 session_start();
 if (!isset($_SESSION['adresseMail'])){
@@ -32,7 +33,6 @@ if (!isset($_SESSION['adresseMail'])){
     <!-- affichage du livre en question  -->
 
 
-<?php echo $_SESSION['adresseMail'];?>
 
     <div class="container">
         <!-- Visualisations des details du livre  -->

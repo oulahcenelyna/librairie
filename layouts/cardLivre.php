@@ -7,15 +7,16 @@ $id = $row['idOuvrage'];
       <div class=" m-1  text-center h-100" style="width:20rem; ">
 
          <!-- image de la carte  -->
-         <div class="card-img-top  mt-2" alt="Card image cap"><?php echo '<img src="images/'.$row['image'].'"height="350px ">'; ?></div>
+         <div class="card-img-top  mt-2 pt-4 imageCardLivre" alt="Card image cap"><?php echo '<img src="images/'.$row['image'].'"height="350px" width="84%">'; ?></div>
             <!-- contenu de la carte -->
             <div class="card-body">
+           
+               
               <!-- Récupération de IdOuvrage pour l'afficher dans l'URL ndu lien ver afficher Livre -->
           <a href='affichageLivres.html.php?idOuvrage=<?php echo $id;?>'>
-            <?php echo htmlspecialchars($row['titre']); ?>
+           <button class="lienLivre"> Voir plus de détails</button>
           </a>
-               <p class="card-text"><small class="text-muted"><?php echo $row['auteur'];?> </small></p>
-               
+             
               
                <tr>
         

@@ -1,6 +1,6 @@
 <!-- barre de recherche -->
 <div class="center">
-	
+<h3>Bienvenue sur <span>la P'tite libraire</span></h3>
 <div class="search">	
 	<form class="search-form" method="GET">
 		<input type="text" name="search"  placeholder="Recherchez un livre, un auteur, . ." required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" >

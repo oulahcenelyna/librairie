@@ -37,7 +37,7 @@
         <!-- affichage des images par catégories et leur nom avec lien hypertext -->
         <div class="media-29101">
           <a href="#<?php echo $row ['idDiscipline']; ?>"><div class="img-fluid"><?php echo '<img src="carousel/imageCat/'.$row['imageCat'].'"height="250px ">'; ?></div></a>
-          <h3><a href="#<?php echo $row ['idDiscipline']; ?>"><?php echo $row ['libelle']; ?></a></h3>
+          <h3><a href="#<?php echo $row ['idDiscipline']; ?>"></a></h3>
         </div>
         <?php
           }

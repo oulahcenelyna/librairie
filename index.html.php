@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="Style/indexstyle.scss">
 </head>
 <body>
+<div class="center">
 <div class="formulaireInscription">
     <h1>Inscription </h1>
     <form method="post" action="layouts/inscription.php">
@@ -38,5 +39,6 @@
 		<input type="submit" name="connecter" value="submit">
 	</form>
     </div>
+</div>
 </body>
 </html>
