@@ -15,6 +15,7 @@
         </div>
        </div>
        
-     
+       <?php include 'layouts/nav-bar.php'?>
+  
         
     </header>

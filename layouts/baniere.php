@@ -1,6 +1,12 @@
 <!-- Banniere d'accueil -->
-<div class="baniere d-flex justify-content-center " >
+<div class="baniere d-flex justify-content-center  " >
+  <div class="d-flex flex-column">
+  <p class="titre p-2" >Reservez les livres de votre CDI <br> en un click ! </p>
+  <div class="petitTexte d-flex  p-2"> 
+    <a href="#7"> <img src="images/eye.png" alt="" id="oeil" >  </a>
+    <a href="#7"> <p>Voir les livres disponibles </p></a>
+</div>
+  </div>
   
-  <p class="titre" >Reservez les livres de votre CDI en un click ! </p>
-  <img src="images/baniere.png" alt="" width="250px" height="200px">
+  <img src="images/baniere.png" alt="">
 </div>
