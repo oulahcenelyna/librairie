@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="Style/indexstyle.scss">
 </head>
 <body>
+	<!-- formulaire inscription -->
 <div class="center">
 <div class="formulaireInscription">
     <h1>Inscription </h1>
@@ -27,8 +28,9 @@
 		<input type="submit" name="envoyer" value="submit">
 	</form>
     </div>
+	<!-- Formulaire connexion -->
     <div class="formulaireConnexion">
-    <h1>Inscription </h1>
+    <h1>Connexion </h1>
     <form method="post" action="layouts/connexion.php">
         Couriel:<br>
 		<input type="email" name="courielFormConnexion">
