@@ -1,6 +1,6 @@
 <!--Carte pour ouvrage  -->
 <div class="column">
-   <div class="card">
+   <div class="card" style="height: 410px;">
       
       
       <p> <?php echo '<img src="images/'.$row['image'].'"height="200px ">'; ?></p>
