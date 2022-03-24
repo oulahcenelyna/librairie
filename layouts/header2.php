@@ -11,7 +11,7 @@
        </div>
         </div>
         <div class=" end mr-3">
-            <img src="images/profil.png" alt="" width="50px" height="50px">
+           <a href="../librairie/profil.html.php"> <img src="images/profil.png" alt="" width="50px" height="50px"></a>
         </div>
        </div>
        

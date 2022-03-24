@@ -1,0 +1,112 @@
+body{
+    background-color: #F8F3ED;
+    margin:0;
+}
+/*Style du header*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-top:2.5em;
+    background-color: #e4b877;
+    color: #F8F3ED;
+    padding: 3%;
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+    color: #383433;
+}
+.polygonRetour{
+    position: absolute;
+    padding-left: 1.5em ;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 30px 60px 30px 0;
+    border-color: transparent #383433 transparent transparent;
+}
+/*Fin du header*/
+/*Style Réservation en cours*/
+h2{
+    padding: 1em 0em 0 2em;
+    margin: 0;
+    color: #383433;
+}
+h3{
+    margin-left: 10em;
+}
+h4{
+    padding-left:10px;
+    text-align: left;
+    font-size: 30px;
+}
+/*Fin Réservation en cours*/
+/*ReservationLivre*/
+.livreReserver{
+    margin: auto;
+    margin-top: 2em;
+    padding: 2em;
+    height:300px;
+    width:90%;
+    background-color: purple;
+    border-radius: 2em;
+    border: solid #383433;
+}
+.livre{
+    float: left;
+    height: 95%;
+    width: 200px;
+    background-color: aquamarine;
+}
+.reference{
+    margin-top: 10%;
+}
+.card-img{
+    /* margin-top: 100px; */
+}
+.card{
+    margin: auto;
+    margin-top: 20px;
+    border: solid 2px;
+    width: 90%;
+    border-radius: 5px;
+    padding: 4px;
+    gap: 10px;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    /* 1fr = prend tout la place disponible */
+    border: 0;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-title {
+    font-size: 30px; 
+    padding-left: 5px;  
+    margin:5px;
+}
+
+.boutonDeconnexion{
+    border: 0;
+    background: transparent;
+}
+.imgDeconnexion{
+    width: 50px;
+}
+.retour{
+    width: 30px;
+}
+img{
+    border-radius: 5%;
+}
+p{
+    display: inline-block;
+    margin-right: 5px;
+}
+/*ReservationLivre*/

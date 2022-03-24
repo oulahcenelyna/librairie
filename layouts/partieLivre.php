@@ -82,7 +82,7 @@
                 //Récupérer le resultat
                 $rows = $result->num_rows; //Nombres de lignes de données
             }
-            else die("Aucun utilisateur choisi");
+            else die("Aucun ouvrage choisi");
             ?>
            
             <div class="resume">
