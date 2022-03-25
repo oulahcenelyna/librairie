@@ -65,9 +65,7 @@ h4{
 .reference{
     margin-top: 10%;
 }
-.card-img{
-    /* margin-top: 100px; */
-}
+
 .card{
     margin: auto;
     margin-top: 20px;
@@ -109,4 +107,25 @@ p{
     display: inline-block;
     margin-right: 5px;
 }
+.footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #383433;
+    padding:10px;
+  }
+  footer {
+    display: block;
+    margin: 0;
+    background-color: #383433;
+    width:100%;
+    color: white;
+    text-align: center;
+    position:relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+  }
+  .footer img{
+    margin: 10px;
+  }
 /*ReservationLivre*/

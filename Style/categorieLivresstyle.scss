@@ -20,6 +20,8 @@
 /* a changer  */
 body{
   background-color: #F8F3ED !important;
+  margin: 0;
+  padding: 0;
 }
 .displayCategorie{
   display: none;
@@ -40,6 +42,7 @@ header{
 }
 
 .edges{
+  margin-top:15px;
 display: flex;
 justify-content: space-between;
 }
@@ -176,9 +179,13 @@ justify-content: space-between;
   .footer{
     display: flex;
     justify-content: space-around;
+    margin: 20px;
+    background-color: #383433;
+    
+  }
+  footer img{
     margin: 10px;
   }
-  
   footer {
     display: block;
     margin: 0;
@@ -186,6 +193,8 @@ justify-content: space-between;
     width:100%;
     color: white;
     text-align: center;
+    
+    
   }
   .icone{
     display: inline;
@@ -203,13 +212,8 @@ justify-content: space-between;
   .imageCardLivre img{
     border-radius: 10px;
   }
-  .footer h2{
-    color:white;
-  }
-  .responsiveFooter{
-    display: flex;
-    justify-content: space-around;
-  }
+  
+  
   .lienLivre{
     border-radius: 10px;
     background-color: #F3E5D0;
@@ -243,6 +247,7 @@ justify-content: space-between;
     }
     .footer{
       display: inline-block;
+      background-color: #383433;
       
     }
     .responsiveFooter{

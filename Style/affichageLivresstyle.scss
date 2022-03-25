@@ -9,7 +9,7 @@ header{
     margin-bottom: 5%;
 }
 .edges{
-
+  margin-top:15px;
   display: flex;
   justify-content: space-between;
 }
@@ -26,6 +26,8 @@ height: 370px;
 .footer{
   display: flex;
   justify-content: space-around;
+  background-color: #383433;
+  padding:10px;
 }
 footer {
   display: block;
@@ -34,6 +36,10 @@ footer {
   width:100%;
   color: white;
   text-align: center;
+  
+}
+.footer img{
+  margin: 10px;
 }
 .icone{
   display: inline;
@@ -48,9 +54,7 @@ footer {
   text-align: left;
   margin-right: 0;
 }
-.footer h2{
-  color:white;
-}
+
 
 h2{
   margin-top: 5%;

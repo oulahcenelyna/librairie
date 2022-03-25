@@ -1,10 +1,4 @@
-<!-- partie pour rester  connecter tout le long des pages -->
-<?php
-session_start();
-if (!isset($_SESSION['adresseMail'])){
-  header('Location:./index.html.php');
-}
-?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
