@@ -2,7 +2,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['adresseMail'])){
-  header('Location:./index.html.php');
+  header('Location:./index.php');
 }
 ?>
 
@@ -88,9 +88,9 @@ if (!isset($_SESSION['adresseMail'])){
         </div>
     </div>
 </div>
-<!-- FOOTER  -->
-<?php include('layouts/footer.php'); ?>
+
      
 </body>
-
+<!-- FOOTER  -->
+<?php include('layouts/footer.php'); ?>
 </html>
