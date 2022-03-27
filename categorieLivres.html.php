@@ -33,12 +33,13 @@ if (!isset($_SESSION['adresseMail'])){
  
     <?php include('layouts/baniere.php'); ?>
     <!-- resultats si recherche effectuée  -->
-    <?php include('resultatRecherche.php'); ?>
-    <!-- carousel des catégories -->
-    <?php include('layouts/categoriesListe.php'); ?>
+  
     
     
    <div class="container">
+   <?php include('resultatRecherche.php'); ?>
+    <!-- carousel des catégories -->
+    <?php include('layouts/categoriesListe.php'); ?>
      
     <!-- CATEGORIE informatique  -->
     <h2 id="7" class="ml-3 mt-3">Informatique</h2>
