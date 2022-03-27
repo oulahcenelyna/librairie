@@ -1,13 +1,21 @@
 <!--Carte pour ouvrage  -->
 <div class="card" >
    <!-- image de la carte  -->
-   <div class="card-img" alt="Card image cap"><?php echo '<img src="images/'.$row['image'].'"height="350px ">'; ?></div>
+   <div class="card-img" alt="Card image cap"><?php echo '<img src="images/'.$row['image'].'"height="300px" width="200px">'; ?></div>
       <!-- contenu de la carte -->
       <div class="card-body">
          <!-- Affichage du titre, du début de l'emprunt et de la fin de l'emprunt -->
-         <h5 class="card-title"><p>Titre:</p> <?php echo $row['titre']; ?></h5>
-         <h5 class="card-title"><p>Date d'emprunt:</p> <?php echo $row['debutEmprunt']; ?></h5>
-         <h5 class="card-title"><p>Fin de l'emprunt: </p><?php echo $row['finEmprunt']; ?></h5>
+         <h5 class="card-title">Titre: <p><?php echo $row['titre']; ?></p></h5>
+         <h5 class="card-title">Date d'emprunt: <p><?php echo $row['debutEmprunt']; ?></p></h5>
+         <h5 class="card-title">Fin de l'emprunt: <p><?php echo $row['finEmprunt']; ?></p></h5>
+         
       </div>
-   </div>
+      <div class="annulerReservation">
+         <h6>Annuler une réservation ?</h6>
+         
+            <p>Pour annuler une réservation vous pouvez : <br> <br> Vous rendre au CDI et faire part de votre demande à la documentaliste.  <br> <br> Envoyer un courriel avec votre demande à l'adresse suivante : </p> 
+            <a href="mailto:laPtiteLibrairie@gmail.com"><b>laPtiteLibrairie@gmail.com</b></a>
+            
+      </div>
+   
 </div>

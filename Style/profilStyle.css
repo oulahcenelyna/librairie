@@ -13,11 +13,20 @@ header{
     color: #F8F3ED;
     padding: 3%;
 }
+.container {
+    /* On ajoute une marge sur les cotés de l’écran */
+    padding-right: 15px;
+    padding-left: 15px;
+    
+    /* Et on centre */
+    margin-right: auto;
+    margin-left: auto;
+    }
 h1{
     font-size: 50px;
     text-align: center;
     margin: 0;
-    color: #383433;
+    color: black;
 }
 .polygonRetour{
     position: absolute;
@@ -40,10 +49,12 @@ h3{
     margin-left: 10em;
 }
 h4{
-    padding-left:10px;
+    padding-left:9%;
     text-align: left;
-    font-size: 30px;
+    font-size: 37px;
+    color: #383433;
 }
+
 /*Fin Réservation en cours*/
 /*ReservationLivre*/
 .livreReserver{
@@ -67,29 +78,72 @@ h4{
 }
 
 .card{
+    
     margin: auto;
     margin-top: 20px;
+    margin-bottom: 20px;
     border: solid 2px;
-    width: 90%;
-    border-radius: 5px;
-    padding: 4px;
+    width: 80%;
+    
+    padding: 20px;
     gap: 10px;
     display: flex;
     grid-template-columns: 1fr 1fr;
     /* 1fr = prend tout la place disponible */
     border: 0;
 }
+.card-img{
+    padding-left: 5%;
+    padding-top: 3%;
+    box-shadow: -6px -5px rgb(236, 204, 135);
+}
 .card-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left:7%
 }
 .card-title {
-    font-size: 30px; 
+    font-size: 25px; 
+    padding-left: 5px;  
+    margin:5px;
+    padding-bottom: 20px;
+}
+.card-title p{
+    font-size: 21px; 
     padding-left: 5px;  
     margin:5px;
 }
+.annulerReservation{
+   
+   width: 24%;
+   margin-left: 4%;
+   box-shadow: 6px 5px rgb(236, 204, 135);
+  
+}
+.annulerReservation p{
+    
+    margin: 5px;
+    margin-top: 20px;
+    padding: 0;
 
+}
+
+.annulerReservation a{
+     padding: 6px;
+    
+    
+    
+    
+    text-decoration: none;
+    color: #789270;
+}
+h6{
+    font-size: 23px;
+    padding: 0;
+    margin: 0;
+    color: #e4b877;
+}
 .boutonDeconnexion{
     border: 0;
     background: transparent;
@@ -102,6 +156,8 @@ h4{
 }
 img{
     border-radius: 5%;
+    
+    
 }
 p{
     display: inline-block;
@@ -129,3 +185,38 @@ p{
     margin: 10px;
   }
 /*ReservationLivre*/
+
+@media only screen and (min-width : 150px) and (max-width : 600px)
+   {
+       .annulerReservation{
+          box-shadow: none;
+          margin: auto;
+          padding: 0;
+          width: 90%;
+          padding: 10px;
+       }
+       .card{
+           display: inline-block;
+           background-color: #F3E5D0;
+           width: 85%;
+           margin: 5%;
+           border-radius: 40px;
+       }
+       .card-title {
+        font-size: 19px; 
+        padding-left: 5px;  
+        margin:5px;
+        padding-bottom: 5px;
+        
+    }
+    .card-img{
+        margin: auto;
+        width: 60%;
+        box-shadow: none;
+        padding: 10px;
+    }
+    .card-title p{
+        font-size: 17px;
+        
+    }
+   }

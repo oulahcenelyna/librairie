@@ -1,4 +1,11 @@
-<header>
-      <a href="categorieLivres.html.php"><div class="arrow-left"></div></a>
-      <h1>Bienvenue</h1>
-</header>
+<header> 
+    <a href="categorieLivres.html.php">
+      <img class="retour" src="images/retour.png" alt="retour sur la page d'accueil">
+    </a>
+    <h1>Bienvenue</h1>
+    <button class="boutonDeconnexion" >
+      <a href="layouts/deconnexion.php">
+        <img class="imgDeconnexion" src="images/deconnecter.png" alt="">
+      </a>
+    </button>
+  </header>
