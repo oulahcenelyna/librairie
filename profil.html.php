@@ -1,7 +1,9 @@
 <!-- partie pour rester  connecter tout le long des pages -->
 <?php
 session_start();
-if (!isset($_SESSION['adresseMail'])){
+ // identification de l'utilisateur connecté avec son idEmprunteur
+ $idEmprunteurtest=$_SESSION['emprunteur'];
+if (!isset($_SESSION['adresseMail'],$_SESSION['emprunteur'])){
   header('Location:./index.php');
 }
 ?>

@@ -1,6 +1,6 @@
     <?php
-    // identification de l'utilisateur connecté avec son idEmprunteur
-      $idEmprunteurtest=$_SESSION['emprunteur'];
+    
+   
     ?>
 
     <!--Livre Réservé -->
@@ -13,7 +13,7 @@
      where emprunteurs_exemplaires.idExemplaire=exemplaires.idExemplaire
      and exemplaires.idOuvrage=ouvrages.idOuvrage
      and emprunteurs_exemplaires.idEmprunteur=$idEmprunteurtest";
-
+     
       //Execution de la requête
       $result = $conn->query($query);
       if(!$result) die("Erreur fatale : requête");
