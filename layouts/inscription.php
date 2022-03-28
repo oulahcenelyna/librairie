@@ -20,18 +20,52 @@ if(isset($_POST['envoyer']))
 	
 	//Récupérer le resultat
 	$rows = $result->num_rows; //Nombres de lignes de données
-	echo $rows;
+	
+
+	 
 	
 	
 	if ($rows === 1) {
-		echo "l'adresse mail existe deja ";
+		?>
+			<script language="javascript">
+			alert("l'adresse mail existe deja");
+			window.location="../index.php";
+			</script>
+			
+			<?php
 	
 	}
 	if ($rows == 0){
 		$query = "INSERT INTO emprunteurs (nom,prenom,adresseMail,motDePasse)
 	 VALUES ('$nomForm','$prenomForm','$courielForm','$MotPasseForm')";
 	 if (mysqli_query($conn, $query)) {
-		echo " Vous avez bien été enregistré !";
+
+		// 
+		$query = "SELECT * From emprunteurs where adresseMail = '$courielForm' AND MotDePasse = '$MotPasseForm'";
+	 
+		//Execution de la requête
+		$result = $conn->query($query);
+		if(!$result) die("Erreur fatale : requête");
+		
+		
+		//  recupere l'id de l'emprunteur à l'inscription
+		while ($row = $result->fetch_assoc()) {
+		   
+		   $idConnection = $row['idEmprunteur'];
+	   }
+	   ?>
+			<script language="javascript">
+			alert(" Vous avez bien été enregistré !");
+			window.location="../categorieLivres.html.php";
+			</script>
+			
+			<?php
+		
+		session_start();
+		$_SESSION['adresseMail'] = $courielForm;
+		$_SESSION['emprunteur'] = $idConnection;
+		
+		 
 	 } 
 	}
 	 

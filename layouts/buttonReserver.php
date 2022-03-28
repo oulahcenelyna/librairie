@@ -127,7 +127,15 @@ if ($nbExemplaireRestant>0){
     VALUES ('$idEmprunteurtest','$exemplaireReservetest','$dateActuelletest','$dateInTwoWeekstest')";
    
        if (mysqli_query($conn, $query)) {
-        echo "Le livre a bien été reservé !";
+        ?>
+        <!-- alerte que le livre a bien été reservé -->
+        <script language="javascript">
+        alert(" Le livre a bien été reservé !");
+        
+        </script>
+        
+        <?php
+        
         
        } 
       

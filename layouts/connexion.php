@@ -1,7 +1,7 @@
 <?php
  require_once '../BD/login_librairie.php';
  include_once '../BD/connexion_librairie.php';
- session_start();
+
 if(isset($_POST['connecter']))
 {	 
 	
@@ -23,19 +23,27 @@ if(isset($_POST['connecter']))
 		$motPasse = $row['MotDePasse'];
 		$idConnection = $row['idEmprunteur'];
 	}
-	echo $query;
+	
 	// print_r($result);
 	//  echo $MotPasseForm;
 	//  echo '<br>----';
 	//  echo $motPasse;
 	 if  ($MotPasseForm === $motPasse) {
-		 
+		session_start();
 		$_SESSION['adresseMail'] = $courielForm;
 		$_SESSION['emprunteur'] = $idConnection;
 		 
 		 header('Location:../categorieLivres.html.php');
 	 }else {
-		echo "adresse mail ou mot de passe incorrect ";	 }
+		?>
+		<!-- alerte identidiants incorrectes -->
+		<script language="javascript">
+		alert(" adresse mail ou mot de passe incorrect");
+		window.location="../index.php";
+		</script>
+		
+		<?php
+			 }
 	 
 }
 ?>
