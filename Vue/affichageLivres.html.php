@@ -36,7 +36,7 @@ if (!isset($_SESSION['adresseMail'])){
 
     <div class="container">
         <!-- Visualisations des details du livre  -->
-        <?php include('../layouts/partieLivre.php'); ?>   
+        <?php include('../Controller/partieLivre.php'); ?>   
         <!-- Etagere 3D -->
     <div class="etagere">
     <div class="shelf">
@@ -73,7 +73,7 @@ if (!isset($_SESSION['adresseMail'])){
             ?>
     </div>
   <!-- Recommendations basées sur ce livre -->
-  <?php include ('../layouts/sqlRecomandation.php')?>
+  <?php include ('../Controller/sqlRecomandation.php')?>
     
   <h2>Recommandé pour vous </h2>
 
