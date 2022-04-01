@@ -4,7 +4,7 @@
     </a>
     <h1>Bienvenue</h1>
     <button class="boutonDeconnexion" >
-      <a href="Controller/deconnexion.php">
+      <a href="../Controller/deconnexion.php">
         <img class="imgDeconnexion" src="../images/deconnecter.png" alt="">
       </a>
     </button>
