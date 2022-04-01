@@ -13,7 +13,7 @@ if (!isset($_SESSION['adresseMail'])){
   <head>
     <link rel="stylesheet">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="Style/categorieLivresstyle.scss">
+    <link rel="stylesheet" href="../Style/categorieLivresstyle.scss">
     
     <title>La P'tite librairie</title>
   </head>
@@ -21,17 +21,17 @@ if (!isset($_SESSION['adresseMail'])){
 
     <!-- connexion à la base de données -->
     <?php
-      require_once 'BD/login_librairie.php';
-      require_once 'BD/connexion_librairie.php';
+      require_once '../BD/login_librairie.php';
+      require_once '../BD/connexion_librairie.php';
 
       
 
     ?>
     <!-- <button> <a href="layouts/deconnexion.php">deconnexion</a> </button>  -->
    <!-- insertion de la barre de recherche et de la banière -->
-   <?php include('layouts/header2.php'); ?> 
+   <?php include('../layouts/header2.php'); ?> 
  
-    <?php include('layouts/baniere.php'); ?>
+    <?php include('../layouts/baniere.php'); ?>
     <!-- resultats si recherche effectuée  -->
   
     
@@ -39,7 +39,7 @@ if (!isset($_SESSION['adresseMail'])){
    <div class="container">
    <?php include('resultatRecherche.php'); ?>
     <!-- carousel des catégories -->
-    <?php include('layouts/categoriesListe.php'); ?>
+    <?php include('../layouts/categoriesListe.php'); ?>
      
     <!-- CATEGORIE informatique  -->
     <h2 id="7" class="ml-3 mt-3">Informatique</h2>
@@ -67,7 +67,7 @@ if (!isset($_SESSION['adresseMail'])){
       <?php
         while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
       ?>
-      <?php include('layouts/cardLivre.php'); ?>
+      <?php include('../layouts/cardLivre.php'); ?>
       
       <?php
         }
@@ -99,7 +99,7 @@ if (!isset($_SESSION['adresseMail'])){
       <?php
         while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
       ?>
-      <?php include('layouts/cardLivre.php'); ?>
+      <?php include('../layouts/cardLivre.php'); ?>
       
       <?php
         }
@@ -130,7 +130,7 @@ if (!isset($_SESSION['adresseMail'])){
       <?php
         while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
       ?>
-      <?php include('layouts/cardLivre.php'); ?>
+      <?php include('../layouts/cardLivre.php'); ?>
       <?php
         }
       ?>
@@ -160,7 +160,7 @@ if (!isset($_SESSION['adresseMail'])){
       <?php
         while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
       ?>
-      <?php include('layouts/cardLivre.php'); ?>
+      <?php include('../layouts/cardLivre.php'); ?>
       <?php
         }
       ?>
@@ -189,7 +189,7 @@ if (!isset($_SESSION['adresseMail'])){
       <?php
         while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
       ?>
-      <?php include('layouts/cardLivre.php'); ?>
+      <?php include('../layouts/cardLivre.php'); ?>
       <?php
         }
       ?>
@@ -219,7 +219,7 @@ if (!isset($_SESSION['adresseMail'])){
       <?php
         while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
       ?>
-      <?php include('layouts/cardLivre.php'); ?>
+      <?php include('../layouts/cardLivre.php'); ?>
       <?php
         }
       ?>
@@ -250,7 +250,7 @@ if (!isset($_SESSION['adresseMail'])){
       <?php
         while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
       ?>
-      <?php include('layouts/cardLivre.php'); ?>
+      <?php include('../layouts/cardLivre.php'); ?>
       <?php
         }
       ?>
@@ -262,7 +262,7 @@ if (!isset($_SESSION['adresseMail'])){
   
   </body>
   <!-- FOOTER  -->
-  <?php include('layouts/footer.php'); ?>
+  <?php include('../layouts/footer.php'); ?>
 
 
   <!-- scripts  -->

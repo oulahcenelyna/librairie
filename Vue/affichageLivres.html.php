@@ -2,7 +2,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['adresseMail'])){
-  header('Location:./index.php');
+  header('Location:../index.php');
 }
 ?>
 
@@ -14,20 +14,20 @@ if (!isset($_SESSION['adresseMail'])){
 <head>
 <link rel="stylesheet">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="Style/affichageLivresstyle.scss">
+    <link rel="stylesheet" href="../Style/affichageLivresstyle.scss">
     <title>Document</title>
   
 </head>
 <body>
     <!-- connexion à la base de données -->
     <?php
-      require_once 'BD/login_librairie.php';
-      require_once 'BD/connexion_librairie.php';
+      require_once '../BD/login_librairie.php';
+      require_once '../BD/connexion_librairie.php';
      
 
     ?>
     <!-- Insertion du header -->
-    <?php include('layouts/header2.php'); ?>
+    <?php include('../layouts/header2.php'); ?>
 
 
     <!-- affichage du livre en question  -->
@@ -36,7 +36,7 @@ if (!isset($_SESSION['adresseMail'])){
 
     <div class="container">
         <!-- Visualisations des details du livre  -->
-        <?php include('layouts/partieLivre.php'); ?>   
+        <?php include('../Controller/partieLivre.php'); ?>   
         <!-- Etagere 3D -->
     <div class="etagere">
     <div class="shelf">
@@ -73,7 +73,7 @@ if (!isset($_SESSION['adresseMail'])){
             ?>
     </div>
   <!-- Recommendations basées sur ce livre -->
-  <?php include ('layouts/sqlRecomandation.php')?>
+  <?php include ('../Controller/sqlRecomandation.php')?>
     
   <h2>Recommandé pour vous </h2>
 
@@ -82,7 +82,7 @@ if (!isset($_SESSION['adresseMail'])){
          <?php 
          
           while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
-         include ('layouts/recomandationLivre.php');
+         include ('../layouts/recomandationLivre.php');
           }
          ?>
         </div>
@@ -92,5 +92,5 @@ if (!isset($_SESSION['adresseMail'])){
      
 </body>
 <!-- FOOTER  -->
-<?php include('layouts/footer.php'); ?>
+<?php include('../layouts/footer.php'); ?>
 </html>

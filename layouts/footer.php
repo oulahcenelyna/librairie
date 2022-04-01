@@ -5,10 +5,10 @@
     <div class="reseauSocial">
       
   
-          <a href="https://www.facebook.com"><img src="images/facebook.png" alt="" width="45px" height="45px"></a>
-          <a href="https://www.instagram.com"><img src="images/instagram.png" alt="" width="50px" height="50px"></a>
+          <a href="https://www.facebook.com"><img src="../images/facebook.png" alt="" width="45px" height="45px"></a>
+          <a href="https://www.instagram.com"><img src="../images/instagram.png" alt="" width="50px" height="50px"></a>
         
-          <a href="https://www.linkedin.com"><img src="images/linkedin.png" alt="" width="50px" height="50px"></a>
+          <a href="https://www.linkedin.com"><img src="../images/linkedin.png" alt="" width="50px" height="50px"></a>
           
         
 

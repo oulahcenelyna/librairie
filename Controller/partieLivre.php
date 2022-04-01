@@ -27,7 +27,7 @@
             
             <div class="auteur">
             <div class="imgAuteur">
-            <img src="images/auteur.png" alt="">
+            <img src="../images/auteur.png" alt="">
             </div>
            <div  class="nomAuteur">
            <?php
@@ -61,7 +61,7 @@
         <?php
                 while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
             ?>
-            <?php echo '<img src="images/'.$row['image'].'"height="680px ">'; ?>
+            <?php echo '<img src="../images/'.$row['image'].'"height="680px ">'; ?>
             <?php
                 }
             ?>
@@ -95,7 +95,7 @@
             ?>
             </div>
             <div class="buttonResponsive">
-            <?php include ('buttonReserver.php')?>
+            <?php include ('../Controller/buttonReserver.php')?>
             </div>
         </div>
         

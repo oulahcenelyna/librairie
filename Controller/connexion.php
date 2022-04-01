@@ -33,7 +33,7 @@ if(isset($_POST['connecter']))
 		$_SESSION['adresseMail'] = $courielForm;
 		$_SESSION['emprunteur'] = $idConnection;
 		 
-		 header('Location:../categorieLivres.html.php');
+		 header('Location:../Vue/categorieLivres.html.php');
 	 }else {
 		?>
 		<!-- alerte identidiants incorrectes -->

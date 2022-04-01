@@ -13,7 +13,7 @@
 <div class="center">
 <div class="formulaireInscription">
     <h1>Inscription </h1>
-    <form method="post" action="layouts/inscription.php" >
+    <form method="post" action="Controller/inscription.php" >
 		
 		<input type="text" name="nomForm" required  placeholder="Nom">
 	
@@ -33,7 +33,7 @@
 	<!-- Formulaire connexion -->
     <div class="formulaireConnexion">
     <h1>Connexion </h1>
-    <form method="post" action="layouts/connexion.php">
+    <form method="post" action="Controller/connexion.php">
       
 		<input type="email" name="courielFormConnexion" required  placeholder="Courriel">
 		

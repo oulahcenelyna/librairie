@@ -4,7 +4,7 @@
 <div class="search">	
 	<form class="search-form" method="GET">
 		<input type="text" name="search"  placeholder="Recherchez un livre, un auteur, . ." required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" >
-		<button type="submit" class="   "><img src="images/research.png" alt="" width="25px" height="25px" class="  "></button>
+		<button type="submit" class="   "><img src="../images/research.png" alt="" width="25px" height="25px" class="  "></button>
 	</form>
 </div>
 </div>
