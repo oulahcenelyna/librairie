@@ -35,7 +35,7 @@
         while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
           
           // Afficher les cards des livres
-          include 'layouts/cardLivreProfil.php';
+          include '../layouts/cardLivreProfil.php';
         }
       }
       // Sinon Afficher Vous n'avez pas de reservation 

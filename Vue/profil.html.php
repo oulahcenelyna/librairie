@@ -17,25 +17,25 @@ if (!isset($_SESSION['adresseMail'],$_SESSION['emprunteur'])){
   <body>
     <!-- connexion à la base de données -->
     <?php
-      require_once 'BD/login_librairie.php';
-      require_once 'BD/connexion_librairie.php';
+      require_once './BD/login_librairie.php';
+      require_once './BD/connexion_librairie.php';
      
 
     ?>
 
     <!-- Insertion du header -->
-    <?php include 'layouts/header.php'?>
+    <?php include './layouts/header.php'?>
 
 
     <div class="container">
       <!-- corps de la page avec les reservations effectuées -->
-    <?php include('layouts/profilHeader.php');?>
+    <?php include('./layouts/profilHeader.php');?>
     </div>
 
   </body>
 
   <!-- FOOTER  -->
-  <?php include('layouts/footer.php'); ?>
+  <?php include('./layouts/footer.php'); ?>
   
 
 </html>

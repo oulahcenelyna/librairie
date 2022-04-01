@@ -5,7 +5,7 @@
     <h1>Bienvenue</h1>
     <button class="boutonDeconnexion" >
       <a href="layouts/deconnexion.php">
-        <img class="imgDeconnexion" src="images/deconnecter.png" alt="">
+        <img class="imgDeconnexion" src="../images/deconnecter.png" alt="">
       </a>
     </button>
   </header>

@@ -56,7 +56,7 @@ if(isset($_POST['envoyer']))
 	   ?>
 			<script language="javascript">
 			alert(" Vous avez bien été enregistré !");
-			window.location="../categorieLivres.html.php";
+			window.location="../Vue/categorieLivres.html.php";
 			</script>
 			
 			<?php
