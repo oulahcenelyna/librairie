@@ -1,5 +1,5 @@
 <header> 
-    <a href="categorieLivres.html.php">
+    <a href="categorieLivres.php">
       <img class="retour" src="../images/retour.png" alt="retour sur la page d'accueil">
     </a>
     <h1>Bienvenue</h1>

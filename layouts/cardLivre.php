@@ -13,7 +13,7 @@ $id = $row['idOuvrage'];
            
                
               <!-- Récupération de IdOuvrage pour l'afficher dans l'URL ndu lien ver afficher Livre -->
-          <a href='affichageLivres.html.php?idOuvrage=<?php echo $id;?>'>
+          <a href='affichageLivres.php?idOuvrage=<?php echo $id;?>'>
            <button class="lienLivre"> Voir plus de détails</button>
           </a>
              

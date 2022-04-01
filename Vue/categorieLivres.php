@@ -3,7 +3,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['adresseMail'])){
-  header('Location:./index.php');
+  header('Location:../index.php');
 }
 ?>
 
