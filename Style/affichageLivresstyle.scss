@@ -1,3 +1,47 @@
+.tempsReservationAlerte{
+  margin-top: 2px;
+  display: flex;
+  justify-content: space-between;
+
+}
+.tempsReservationAlerte h6{
+font-size: 19px;
+font-weight: bold;
+color: 
+#d11523;
+
+margin-top: 9px;
+
+}
+.tempsReservationAlerte img{
+ width: 35px;
+ height: 35px;
+
+  }
+.encre {
+  float: right;
+  
+}
+.pastille{
+  display: block;
+position: absolute;
+width: 14px;
+height: 14px;
+border-radius: 100%;
+background-color: 
+#be6804;
+top: -37px;
+left: -1px;
+color : white;
+font-size: 10px;
+font-weight: bolder;
+text-align: center;
+
+}
+.imageProfil{
+  position: relative;
+}
+
 body{
     background-color: #F8F3ED;
     
@@ -122,7 +166,7 @@ text-align: center;
 }
  .resume{
   border-radius: 20px;
-  padding:  0px 20px 0px 20px;
+  padding:  0px 10px 0px 10px;
      font-size: 18px;
      width: 500px;
      height: auto;
@@ -142,7 +186,7 @@ text-align: center;
      color: white;
      font-weight: bold;
      border-style: none;
-     margin-bottom: 8px;
+     margin-top:0;
  }
  input[type=submit]:hover{
   transform: scale(1.1);

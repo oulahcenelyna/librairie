@@ -17,7 +17,7 @@
                     {
                 ?>
                             
-                <?php include('layouts/cardLivre.php'); ?>
+                <?php include('../layouts/cardLivre.php'); ?>
                         
                 <?php } ?>
             </div>

@@ -4,7 +4,7 @@ session_start();
  // identification de l'utilisateur connecté avec son idEmprunteur
  $idEmprunteurtest=$_SESSION['emprunteur'];
 if (!isset($_SESSION['adresseMail'],$_SESSION['emprunteur'])){
-  header('Location:./index.php');
+  header('Location:../index.php');
 }
 ?>
 <!DOCTYPE html>

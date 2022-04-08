@@ -3,7 +3,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['adresseMail'])){
-  header('Location:./index.php');
+  header('Location:../index.php');
 }
 ?>
 
@@ -29,7 +29,8 @@ if (!isset($_SESSION['adresseMail'])){
     ?>
     <!-- <button> <a href="layouts/deconnexion.php">deconnexion</a> </button>  -->
    <!-- insertion de la barre de recherche et de la banière -->
-   <?php include('../layouts/header2.php'); ?> 
+   <div id="#top"><?php include('../layouts/header2.php'); ?> </div>
+   
  
     <?php include('../layouts/baniere.php'); ?>
     <!-- resultats si recherche effectuée  -->
