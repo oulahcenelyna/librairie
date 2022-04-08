@@ -1,6 +1,9 @@
 <?php
- require_once '../BD/login_librairie.php';
- include_once '../BD/connexion_librairie.php';
+ require '../BD/login_librairie.php';
+ require '../BD/connexion_librairie.php';
+  require '../Modele/user.php';
+
+
 
 if(isset($_POST['connecter']))
 {	 
@@ -10,10 +13,13 @@ if(isset($_POST['connecter']))
 	 
 	 $courielForm = htmlspecialchars($_POST['courielFormConnexion']);
 	 $MotPasseForm = hash('sha256', htmlspecialchars($_POST['MotPasseFormConnexion']));
-	 $query = "SELECT * From emprunteurs where adresseMail = '$courielForm' AND MotDePasse = '$MotPasseForm'";
+	
 	 
-	 //Execution de la requête
-	 $result = $conn->query($query);
+		
+		$result = Maconnexion($courielForm,$MotPasseForm);
+
+		
+
 	 if(!$result) die("Erreur fatale : requête");
 	 
 	 
