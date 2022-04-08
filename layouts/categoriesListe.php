@@ -10,7 +10,6 @@
 
 <div class="p-3 pt-5 ">    
 
-
   <!-- Requete d'affichage de l'enssemble des catégories -->
   <?php  //Préparation de la requête
     $query = "SELECT libelle,idDiscipline,imageCat from disciplines ";
@@ -23,7 +22,6 @@
     $rows = $result->num_rows; //Nombres de lignes de données
 
   ?>
-
   <!-- carousel de catégories -->
   <div class="site-section bg-left-half mb-5">
     <div class="container owl-2-style">
@@ -45,7 +43,5 @@
       </div>
     </div>
   </div>
-
-
 </div>  
 
