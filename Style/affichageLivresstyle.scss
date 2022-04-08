@@ -5,37 +5,32 @@
 
 }
 .tempsReservationAlerte h6{
-font-size: 19px;
-font-weight: bold;
-color: 
-#d11523;
-
-margin-top: 9px;
-
+  font-size: 19px;
+  font-weight: bold;
+  color: #d11523;
+  margin-top: 9px;
 }
 .tempsReservationAlerte img{
  width: 35px;
  height: 35px;
-
-  }
+}
 .encre {
   float: right;
-  
 }
 .pastille{
   display: block;
-position: absolute;
-width: 14px;
-height: 14px;
-border-radius: 100%;
-background-color: 
-#be6804;
-top: -37px;
-left: -1px;
-color : white;
-font-size: 10px;
-font-weight: bolder;
-text-align: center;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: 
+  #be6804;
+  top: -37px;
+  left: -1px;
+  color : white;
+  font-size: 10px;
+  font-weight: bolder;
+  text-align: center;
 
 }
 .imageProfil{
@@ -44,12 +39,9 @@ text-align: center;
 
 body{
     background-color: #F8F3ED;
-    
-    padding :0;
-    
+    padding :0;  
 }
 header{
-   
     margin-bottom: 5%;
 }
 .edges{
@@ -57,16 +49,14 @@ header{
   display: flex;
   justify-content: space-between;
 }
-.container{
-    
+.container{ 
     margin-bottom: 1%;
 }
 
 .livreCouverture img{
-width: 270px;
-height: 370px;
+  width: 270px;
+  height: 370px;
 }
-
 .footer{
   display: flex;
   justify-content: space-around;
@@ -80,7 +70,6 @@ footer {
   width:100%;
   color: white;
   text-align: center;
-  
 }
 .footer img{
   margin: 10px;
@@ -98,14 +87,10 @@ footer {
   text-align: left;
   margin-right: 0;
 }
-
-
 h2{
   margin-top: 5%;
   color:black;
- 
-  font-size: 30px;
-  
+  font-size: 30px; 
 }
 h3{
     margin-left: 5px;
@@ -114,7 +99,6 @@ h3{
 }
  #currentLivre{
      background-color: #DAAA63;
-    
      border-radius: 13px;
  }
  .legende{

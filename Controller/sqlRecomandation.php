@@ -1,48 +1,17 @@
 
 
-      <!-- requette pour recueillir l'ID de la catégorie  -->
-      <?php  //Préparation de la requête
-    $categorieLivreSelectionne=("SELECT disciplines_ouvrages.idDiscipline
-      from disciplines,disciplines_ouvrages,ouvrages
-      where disciplines.idDiscipline=disciplines_ouvrages.idDiscipline
-      AND disciplines_ouvrages.idOuvrage=ouvrages.idOuvrage
-      AND ouvrages.idOuvrage= ".$_GET['idOuvrage']);
-      
+<!-- requette pour recueillir l'ID de la catégorie  -->
+<?php  
 
-          //Execution de la requête
-          $result = $conn->query($categorieLivreSelectionne);
-          if(!$result) die("Erreur fatale : categorie ");
+  require '../Modele/CategorieOuvrageModele.php';
+  require '../Modele/AfficherRecommandationModele.php';
+  //seelctionner l'id du livre selectionné pour en obtenir la catégorie
+  $result=CategorieOuvrage();
 
-          //Récupérer le resultat
-          $rows = $result->num_rows; //Nombres de lignes de données
+  while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
+    $IdDisciplineLivre=$row['idDiscipline'];
+  }
 
-
-        
-        ?>
-   
-    <?php 
-    while ( $row = $result-> fetch_array(MYSQLI_ASSOC) ) {
-          $IdDisciplineLivre=$row['idDiscipline'];
-        }
-          ?>
-      
-
-  <!-- afficher les livres recommandés -->
-  <?php  //Préparation de la requête
-  
-      $query = "SELECT * 
-      FROM ouvrages,disciplines_ouvrages 
-      WHERE ouvrages.idOuvrage=disciplines_ouvrages.idOuvrage 
-      AND disciplines_ouvrages.idDiscipline = $IdDisciplineLivre
-      AND ouvrages.idOuvrage not like ".$_GET['idOuvrage']; 
-
-      //Execution de la requête
-      $result = $conn->query($query);
-      if(!$result) die("Erreur fatale : requête");
-
-      //Récupérer le resultat
-      $rows = $result->num_rows; //Nombres de lignes de données
-
-
-    
-    ?>
+  //  afficher les livres recommandés en fonction de la categorie
+  $result=AfficherRecommandation($IdDisciplineLivre);
+?>
