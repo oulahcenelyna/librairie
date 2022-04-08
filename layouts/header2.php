@@ -37,7 +37,7 @@
                   if ($rows !=0 ){
                      ?>
                      <!-- apparition de pastille si des reservations sont faites -->
-                     <span class="pastille">1</span>
+                     <span class="pastille">!</span>
                      <?php 
                    }
                ?>

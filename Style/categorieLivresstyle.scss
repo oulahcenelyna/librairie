@@ -1,23 +1,7 @@
-/* input[type=text]{
-  width: 100%;
-  padding: 10.5px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-sizing: border-box;
+.encre {
+  float: right;
+ 
 }
-.rechercher{
-
-  padding: 8.5px 12px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-sizing: border-box;
-  font-size: 17.5px;
-} */
-
 .pastille{
   display: block;
 position: absolute;
@@ -270,12 +254,14 @@ justify-content: space-between;
     .footer{
       display: inline-block;
       background-color: #383433;
-      
+      margin: 0;
     }
     .responsiveFooter{
       display: flex;
       justify-content: space-between;
       margin-left: 10px;
+
+      
     }
     
     .baniere img {

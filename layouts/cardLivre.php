@@ -7,7 +7,7 @@ $id = $row['idOuvrage'];
       <div class=" m-1  text-center h-100" style="width:20rem; ">
 
          <!-- image de la carte  -->
-         <div class="card-img-top  mt-2 pt-4 imageCardLivre" alt="Card image cap"><?php echo '<img src="../images/'.$row['image'].'"height="350px" width="84%">'; ?></div>
+         <div class="card-img-top  mt-2 pt-4 imageCardLivre" alt="Card image cap">  <a href='affichageLivres.php?idOuvrage=<?php echo $id;?>'> <?php echo '<img src="../images/'.$row['image'].'"height="350px" width="84%">'; ?></a></div>
             <!-- contenu de la carte -->
             <div class="card-body">
            

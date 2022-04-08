@@ -1,8 +1,14 @@
+<?php 
+$id = $row['idOuvrage'];
+?>
 <!--Carte pour ouvrage  -->
 <div class="card" >
    <!-- image de la carte  -->
-   <div class="card-img" alt="Card image cap"><?php echo '<img src="../images/'.$row['image'].'"height="300px" width="200px">'; ?></div>
-      <!-- contenu de la carte -->
+   <div class="card-img" alt="Card image cap">  
+   <a href='affichageLivres.php?idOuvrage=<?php echo $id;?>'>
+       <?php echo '<img src="../images/'.$row['image'].'"height="300px" width="200px">'; ?></div>
+</a>
+       <!-- contenu de la carte -->
       <div class="card-body">
          <!-- Affichage du titre, du début de l'emprunt et de la fin de l'emprunt -->
          <h5 class="card-title">Titre: <p><?php echo $row['titre']; ?></p></h5>

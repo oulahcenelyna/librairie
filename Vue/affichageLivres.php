@@ -15,7 +15,7 @@ if (!isset($_SESSION['adresseMail'])){
 <link rel="stylesheet">
     <meta charset="utf-8">
     <link rel="stylesheet" href="../Style/affichageLivresstyle.scss">
-    <title>Document</title>
+    <title>Détail</title>
   
 </head>
 <body>
@@ -27,7 +27,7 @@ if (!isset($_SESSION['adresseMail'])){
 
     ?>
     <!-- Insertion du header -->
-    <?php include('../layouts/header2.php'); ?>
+    <div id="#top"><?php include('../layouts/header2.php'); ?></div>
 
 
     <!-- affichage du livre en question  -->

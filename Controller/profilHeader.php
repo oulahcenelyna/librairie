@@ -8,7 +8,7 @@
     <?php  
     //Préparation de la requête 
     //Pour aficher dans la card du livre la debutEmprunt,finEmprunt,image,titre comme information 
-     $query = "SELECT debutEmprunt,finEmprunt,image,titre,emprunteurs_exemplaires.idEmprunteur,emprunteurs_exemplaires.idExemplaire
+     $query = "SELECT ouvrages.idOuvrage, debutEmprunt,finEmprunt,image,titre,emprunteurs_exemplaires.idEmprunteur,emprunteurs_exemplaires.idExemplaire
      from emprunteurs_exemplaires,ouvrages,exemplaires
      where emprunteurs_exemplaires.idExemplaire=exemplaires.idExemplaire
      and exemplaires.idOuvrage=ouvrages.idOuvrage

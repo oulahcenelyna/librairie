@@ -1,3 +1,6 @@
+.encre img {
+    display: none;
+  }
 body{
     background-color: #F8F3ED;
     margin:0;
@@ -168,6 +171,7 @@ p{
     justify-content: space-around;
     background-color: #383433;
     padding:10px;
+    margin: 0;
   }
   footer {
     display: block;

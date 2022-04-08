@@ -55,7 +55,7 @@
                 //Récupérer le resultat
                 $rows = $result->num_rows; //Nombres de lignes de données
             }
-            else die("Aucun utilisateur choisi");
+            else die("Aucun ouvrage choisi");
             ?>
         <div class="livreCouverture">
         <?php
@@ -93,6 +93,10 @@
             <?php
                 }
             ?>
+            </div>
+            <div class="tempsReservationAlerte">
+                <img src="../images/alerte.png" alt="">
+                <h6>Une fois réservé le livre est à votre disposition pendant 15 jours </h6>
             </div>
             <div class="buttonResponsive">
             <?php include ('../Controller/buttonReserver.php')?>

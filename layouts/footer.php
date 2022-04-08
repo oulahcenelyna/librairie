@@ -1,5 +1,8 @@
 <!-- footer -->
-<img src="../images/encre.png" alt="">
+<div class="encre">
+  <a href="#top"><img src="../images/encre.png" alt="" ></a>
+  
+</div>
 <!-- Bas de page  -->
 <footer >
   <div class="footer">
