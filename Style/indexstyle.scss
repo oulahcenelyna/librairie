@@ -10,6 +10,7 @@ h1{
   color: #3b0710;
   text-align: center;
 }
+/* *************** centrer le cadrant des formulaires ***************/
 .center {
   margin: auto;
   height: 50%;
@@ -26,13 +27,13 @@ h1{
   top: 50%;
   transform: translate(-50%, -50%);
   }
+  /* ******** ligne qui sépare les deux fomulaires *****/
   .ligne{
     border-left: solid;
     border-color: #3b0710;
-   
-   
-   
+
   }
+  /* *************** formulaires ***************/
   .formulaireConnexion{
     padding: 20px;
   }
@@ -62,6 +63,7 @@ h1{
     background-color: #F1C98F;
     color: #8A6734;
   }
+  /* *************** RESPONSIVE ***************/
   @media only screen and (max-width: 780px) {
      body { /* The file size of this background image is 93% smaller to improve page load speed on mobile internet connections */ 
       background-image: url("../images/login.jpg");

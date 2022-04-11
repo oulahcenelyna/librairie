@@ -1,11 +1,11 @@
-<!-- partie pour rester  connecter tout le long des pages -->
+<!-- partie pour rester  connecter tout le long des pages et rediriger a l'index en cas d'erreur -->
 <?php
-session_start();
- // identification de l'utilisateur connecté avec son idEmprunteur
- $idEmprunteurtest=$_SESSION['emprunteur'];
-if (!isset($_SESSION['adresseMail'],$_SESSION['emprunteur'])){
-  header('Location:../index.php');
-}
+  session_start();
+  // identification de l'utilisateur connecté avec son idEmprunteur
+  $idEmprunteurtest=$_SESSION['emprunteur'];
+  if (!isset($_SESSION['adresseMail'],$_SESSION['emprunteur'])){
+    header('Location:../index.php');
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -19,7 +19,6 @@ if (!isset($_SESSION['adresseMail'],$_SESSION['emprunteur'])){
     <?php
       require_once '../BD/login_librairie.php';
       require_once '../BD/connexion_librairie.php';
-     
 
     ?>
 
@@ -29,7 +28,7 @@ if (!isset($_SESSION['adresseMail'],$_SESSION['emprunteur'])){
 
     <div class="container">
       <!-- corps de la page avec les reservations effectuées -->
-    <?php include('../Controller/profilHeader.php');?>
+      <?php include('../Controller/profilHeader.php');?>
     </div>
 
   </body>

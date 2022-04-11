@@ -1,3 +1,25 @@
+body{
+  background-color: #F8F3ED;
+  padding :0;  
+}
+.container{ 
+  margin-bottom: 1%;
+}
+
+/*TITRES*/
+h2{
+  margin-top: 5%;
+  color:black;
+  font-size: 30px; 
+}
+h3{
+    margin-left: 5px;
+     padding: 5px 10px 5px 10px;
+     font-size: 22px;
+}
+
+
+/* Alerte de temps de reservation */
 .tempsReservationAlerte{
   margin-top: 2px;
   display: flex;
@@ -14,9 +36,9 @@
  width: 35px;
  height: 35px;
 }
-.encre {
-  float: right;
-}
+
+
+/*HEADER*/
 .pastille{
   display: block;
   position: absolute;
@@ -37,10 +59,7 @@
   position: relative;
 }
 
-body{
-    background-color: #F8F3ED;
-    padding :0;  
-}
+
 header{
     margin-bottom: 5%;
 }
@@ -49,13 +68,11 @@ header{
   display: flex;
   justify-content: space-between;
 }
-.container{ 
-    margin-bottom: 1%;
-}
 
-.livreCouverture img{
-  width: 270px;
-  height: 370px;
+
+/* footer */
+.encre {
+  float: right;
 }
 .footer{
   display: flex;
@@ -74,28 +91,12 @@ footer {
 .footer img{
   margin: 10px;
 }
-.icone{
-  display: inline;
-  margin: 5px;
-}
-.cardIcone{
-  display: flex;
-}
-.contributeurs{
-  width: 30%;
-  font-size: 15px;
-  text-align: left;
-  margin-right: 0;
-}
-h2{
-  margin-top: 5%;
-  color:black;
-  font-size: 30px; 
-}
-h3{
-    margin-left: 5px;
-     padding: 5px 10px 5px 10px;
-     font-size: 22px;
+
+
+/* CARACTERISTIQUES D'OUVRAGE*/
+.livreCouverture img{
+  width: 270px;
+  height: 370px;
 }
  #currentLivre{
      background-color: #DAAA63;
@@ -335,7 +336,7 @@ button{
     display: none;
   }
  
-  /* PARTIE RESPONSIVE  */
+  /* PARTIE RESPONSIVE DE LA PAGE */
   @media only screen and (max-width: 770px) {
     body {
       background-color: #F8F3ED;

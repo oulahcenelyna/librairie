@@ -1,7 +1,67 @@
-.encre {
-  float: right;
- 
+body{
+  background-color: #F8F3ED !important;
+  margin: 0;
+  padding: 0;
 }
+/* ==================================
+   ====== barre de recherche  ======= 
+   ================================== */
+.center {
+margin: auto;
+width: 65%;
+
+
+}
+.search
+{
+  border: none;
+  overflow: auto;
+  border-radius: 5px;
+  
+  width: 100%;
+  margin: 0px 4px 16px 10% ;
+  background-color: none;
+}
+.search-form{
+  justify-content:end;
+}
+.search-form input[type="text"]
+{
+  font-size: 20px;
+  border: 0px;
+  height: 65px;
+  padding: 10px 10px;
+  background-color: white;
+  width: 75%;
+  
+}
+
+.search-form input[type="text"]:focus
+{
+  outline: 0;
+}
+
+.search button[type="submit"]
+{
+
+  float: right;
+  border: 0px;
+  background: none;
+  background-color: #DAAA63;
+  color: #fff;
+  float: right;
+  padding: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width:10%;
+  height: 65px;
+  margin-right: 15%;
+  
+cursor:pointer;
+}
+
+
+  /* =========HEADER ============ */
 .pastille{
   display: block;
 position: absolute;
@@ -22,12 +82,8 @@ text-align: center;
   position: relative;
 }
 
-/* a changer  */
-body{
-  background-color: #F8F3ED !important;
-  margin: 0;
-  padding: 0;
-}
+
+
 .displayCategorie{
   display: none;
 }
@@ -51,6 +107,8 @@ header{
 display: flex;
 justify-content: space-between;
 }
+
+/**********BANIERE***********/
 .titre{
   font-weight: 600;
   font-size: 36px;
@@ -90,78 +148,8 @@ justify-content: space-between;
   height:32px;
   margin-right: 15px;
 }
-.card-img-top {
-  background-color: white;
-  border-top-right-radius: 20px!important;
-  border-top-left-radius: 20px!important;
-  
-}
-.card-img-top img{
-  object-fit: cover;
-  
-}
 
-.card-body{
-  background-color: white;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-/* ==================================
-   ====== barre de recherche  ======= 
-   ================================== */
-   .center {
-    margin: auto;
-    width: 65%;
-    
-    
-    }
-   .search
-   {
-     border: none;
-     overflow: auto;
-     border-radius: 5px;
-     
-     width: 100%;
-     margin: 0px 4px 16px 10% ;
-     background-color: none;
-   }
-   .search-form{
-     justify-content:end;
-   }
-   .search-form input[type="text"]
-   {
-     font-size: 20px;
-     border: 0px;
-     height: 65px;
-     padding: 10px 10px;
-     background-color: white;
-     width: 75%;
-     
-   }
-  
-   .search-form input[type="text"]:focus
-   {
-     outline: 0;
-   }
-   
-   .search button[type="submit"]
-   {
-    
-     float: right;
-     border: 0px;
-     background: none;
-     background-color: #DAAA63;
-     color: #fff;
-     float: right;
-     padding: 10px;
-     border-top-right-radius: 5px;
-     border-bottom-right-radius: 5px;
-     width:10%;
-     height: 65px;
-     margin-right: 15%;
-     
-    cursor:pointer;
-   }
+
 
    /*====== profile icon= =====*/
    .topright {
@@ -181,40 +169,25 @@ justify-content: space-between;
      height:37px;
   }
   
-  /* ============ FOOTER ========*/
-  .footer{
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
-    background-color: #383433;
+ 
+    /* ============ CARTE LIVRE ========*/
+    .card-img-top {
+      background-color: white;
+      border-top-right-radius: 20px!important;
+      border-top-left-radius: 20px!important;
+      
+    }
+    .card-img-top img{
+      object-fit: cover;
+      
+    }
     
-  }
-  footer img{
-    margin: 10px;
-  }
-  footer {
-    display: block;
-    margin: 0;
-    background-color: #383433;
-    width:100%;
-    color: white;
-    text-align: center;
+    .card-body{
+      background-color: white;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
     
-    
-  }
-  .icone{
-    display: inline;
-    margin: 5px;
-  }
-  .cardIcone{
-    display: flex;
-  }
-  .contributeurs{
-    width: 30%;
-    font-size: 15px;
-    text-align: left;
-    margin-right: 0;
-  }
   .imageCardLivre img{
     border-radius: 10px;
   }
@@ -236,7 +209,32 @@ justify-content: space-between;
     transform: scale(1.05);
   }
   
-  
+   /* ============ FOOTER ========*/
+   .encre {
+    float: right;
+   
+  }
+  .footer{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    background-color: #383433;
+    
+  }
+  footer img{
+    margin: 10px;
+  }
+  footer {
+    display: block;
+    margin: 0;
+    background-color: #383433;
+    width:100%;
+    color: white;
+    text-align: center;
+    
+    
+  }
+
    /* ================================= RESPONSIVE DU PROJET  ================================= */
    
    @media only screen and (min-width : 150px) and (max-width : 780px)
