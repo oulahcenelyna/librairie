@@ -11,7 +11,7 @@
   <head>
     <link rel="stylesheet">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../Style/affichageLivresstyle.scss">
+    <link rel="stylesheet" href="../Style/affichageLivresstyle.css">
     <title>Détail</title>
     
   </head>
