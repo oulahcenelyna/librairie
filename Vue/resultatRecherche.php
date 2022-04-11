@@ -1,3 +1,4 @@
+<!-- partie pour afficher le resultat des recherches -->
 <?php 
     $conn = new mysqli($hn, $un, $pw, $db);
 
