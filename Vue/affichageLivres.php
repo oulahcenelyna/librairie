@@ -11,6 +11,7 @@
   <head>
     <link rel="stylesheet">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Style/affichageLivresstyle.css">
     <title>Détail</title>
     
@@ -38,7 +39,16 @@
         <div class="left-side"></div>
         <div class="right-side"></div>
       </div>
-    
+      <div class="auteurResponsive">
+
+      </div>
+      <div class="reserverButtonResponsive">
+
+      </div>
+      <div class="tempsReservationAlerteResponsive">
+        <img src="../images/alerte.png" alt="">
+        <h6>Une fois réservé le livre est à votre disposition pendant 15 jours </h6>
+      </div>
       <div class="resumeResponsive">
 
         <?php

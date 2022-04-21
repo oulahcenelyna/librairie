@@ -201,9 +201,17 @@ button{
   font-weight: bold;
   border-style: none;
 }
+.tempsReservationAlerteResponsive{
+  display: none;
+    }
 .center{
   display: none;
 }
+
+
+
+
+
  /* ********************************************** */
  /* ****** BOOK ETAGERE 3D */
  /* ************************************************ */
@@ -356,7 +364,26 @@ button{
         width: 100%;
        
     }
+    .tempsReservationAlerte{
+      display: none;
+    }
     
+    .tempsReservationAlerteResponsive{
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    
+    }
+    .tempsReservationAlerteResponsive h6{
+      font-size: 19px;
+      font-weight: bold;
+      color: #d11523;
+      margin-top: 9px;
+    }
+    .tempsReservationAlerteResponsive img{
+     width: 35px;
+     height: 35px;
+    }
     .footer{
       display: inline-block;
       margin: 10px;
