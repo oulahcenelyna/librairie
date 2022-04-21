@@ -68,6 +68,9 @@ h1{
      body { /* The file size of this background image is 93% smaller to improve page load speed on mobile internet connections */ 
       background-image: url("../images/login.jpg");
      } 
+     .formulaireConnexion{
+      padding-bottom: 40px;
+    }
      input[type=text], input[type=email]{
       padding: 7px 10px;
       margin: 6px 0;

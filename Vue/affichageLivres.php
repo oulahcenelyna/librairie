@@ -43,7 +43,7 @@
 
       </div>
       <div class="reserverButtonResponsive">
-
+      <?php include ('../Controller/buttonReserver.php')?>
       </div>
       <div class="tempsReservationAlerteResponsive">
         <img src="../images/alerte.png" alt="">

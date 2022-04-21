@@ -204,6 +204,9 @@ button{
 .tempsReservationAlerteResponsive{
   display: none;
     }
+  .reserverButtonResponsive{
+    display: none;
+  }
 .center{
   display: none;
 }
@@ -346,6 +349,20 @@ button{
  
   /* PARTIE RESPONSIVE DE LA PAGE */
   @media only screen and (max-width: 770px) {
+    .resumeButton{
+      display: none;
+    }
+ 
+    .reserverButtonResponsive {
+      display: inline-block;
+     padding: 9px;
+     border-radius: 10px;
+     height: 50px;
+     
+     font-weight: bold;
+     border-style: none;
+     margin-top:5px;
+    }
     body {
       background-color: #F8F3ED;
     }
@@ -398,13 +415,15 @@ button{
     
     .auteur{
       background-color: #DAAA63;
-      
-      font-size: 15px;
-      margin: 5px;
-      padding: 6px;
+      height: auto;
+      font-size: 10px;
+      margin: 3px;
+      padding: 0;
+      padding-top: 10px;
       text-align: center;
-      margin-bottom: 60px;
-      margin-top: 40px;
+      margin-bottom: 100px;
+      margin-top: 80px;
+      margin-left: 7px;
        }
       
        .resume{
@@ -414,9 +433,7 @@ button{
         display: block;
       }
       .auteur img{
-        width: 70px;
-        height: 70px;
-       
-        
+        display: none;
+ 
       }
   }
